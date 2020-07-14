@@ -8,6 +8,9 @@ configure({ adapter: new Adapter() });
 
 describe('Counter Testing', () => {
   test('render the title of counter', () => {
+    const wrapper = shallow(<App />);
+    console.log(wrapper.debug());
+    
     const { getByText } = render(<App />);
     const linkElement = getByText('Counter app');
     expect(linkElement).toBeInTheDocument();
