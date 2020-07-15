@@ -7,14 +7,22 @@ import Adapter from 'enzyme-adapter-react-16';
 configure({ adapter: new Adapter() });
 
 describe("Counter Testing", () => {
+
+  let wrapper;
+  beforeEach(() => {
+    wrapper = shallow(<App />);
+  })
+
   test("render the title of counter", () => {
-    const wrapper = shallow(<App />);
     expect(wrapper.find("h1").text()).toContain("Counter app")
   })
 
   test("render a button with text of increment", () => {
-    const wrapper = shallow(<App/>);
     expect(wrapper.find("#increment-btn").text()).toBe("Increment");
+  })
+
+  test("render the initial value of state in a div", () => {
+  
   })
 
 });
