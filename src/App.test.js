@@ -14,7 +14,7 @@ describe("Counter Testing", () => {
   })
 
   test("render the title of counter", () => {
-    expect(wrapper.find("h1").text()).toContain("Counter app")
+    expect(wrapper.find("h1").text()).toContain("Counter app");
   })
 
   test("render a button with text of increment", () => {
@@ -22,7 +22,7 @@ describe("Counter Testing", () => {
   })
 
   test("render the initial value of state in a div", () => {
-  
+    expect(wrapper.find("#counter-value").text()).toBe(0);
   })
 
 });
