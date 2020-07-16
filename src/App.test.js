@@ -1,8 +1,8 @@
 import React from 'react';
 import Counter from './Counter';
-import { shallow } from 'enzyme';
+import { shallow, mount } from 'enzyme';
 import App from './App';
-import { mount } from 'enzyme';
+
 
 describe("Counter Testing", () => {
 
