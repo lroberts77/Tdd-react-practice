@@ -1,6 +1,8 @@
 import React from 'react';
 import Counter from './Counter';
 import { shallow } from 'enzyme';
+import App from './App';
+import { mount } from 'enzyme';
 
 describe("Counter Testing", () => {
 
@@ -36,7 +38,19 @@ describe("Counter Testing", () => {
     wrapper.find("#decrement-btn").simulate("click")
     expect(wrapper.find("#counter-value").text()).toBe("0")
   })
-
-
-
 });
+
+describe("counter test mount", () => {
+  let wrapper;
+  beforeEach(() => {
+    wrapper = mount(<App />);
+  })
+
+    test("render the click event of decrement-btn and decrement counter value", () => {
+      wrapper.find("#increment-btn").simulate("click")
+      expect(wrapper.find("#counter-value").text()).toBe("1")
+      wrapper.find("#decrement-btn").simulate("click")
+      expect(wrapper.find("#counter-value").text()).toBe("0")
+    })
+
+})
