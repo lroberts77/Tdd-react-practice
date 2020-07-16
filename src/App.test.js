@@ -42,6 +42,15 @@ describe("Counter Testing", () => {
     wrapper.find("#decrement-btn").simulate("click")
     expect(wrapper.find("#counter-value").text()).toBe("0")
   })
+
+  test("render the click event of reset-btn and reset counter value", () => {
+    wrapper.find("#increment-btn").simulate("click")
+    expect(wrapper.find("#counter-value").text()).toBe("1")
+    wrapper.find("#increment-btn").simulate("click")
+    expect(wrapper.find("#counter-value").text()).toBe("2")
+    wrapper.find("#reset-btn").simulate("click")
+    expect(wrapper.find("#counter-value").text()).toBe("0")
+  });
 });
 
 describe("counter test mount", () => {
