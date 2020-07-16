@@ -1,12 +1,12 @@
 import React from 'react';
-import App from './App';
+import Counter from './Counter';
 import { shallow } from 'enzyme';
 
 describe("Counter Testing", () => {
 
   let wrapper;
   beforeEach(() => {
-    wrapper = shallow(<App />);
+    wrapper = shallow(<Counter />);
   })
 
   test("render the title of counter", () => {
