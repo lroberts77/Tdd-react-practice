@@ -28,7 +28,7 @@ describe("Counter Testing", () => {
   })
 
   test("render a button with text of reset", () => {
-    expect(wrapper.find("#reset-btn").text()).toBe("reset");
+    expect(wrapper.find("#reset-btn").text()).toBe("Reset");
   })
 
   test("render the click event of increment-btn and increment counter value", () => {
