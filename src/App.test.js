@@ -31,6 +31,10 @@ describe("Counter Testing", () => {
     expect(wrapper.find("#reset-btn").text()).toBe("Reset");
   })
 
+  test("render a button with text of square", () => {
+    expect(wrapper.find("#squre-btn").text()).toBe("Square");
+  })
+
   test("render the click event of increment-btn and increment counter value", () => {
     wrapper.find("#increment-btn").simulate("click")
     expect(wrapper.find("#counter-value").text()).toBe("1")
