@@ -52,9 +52,9 @@ describe("Counter Testing", () => {
     expect(wrapper.find("#counter-value").text()).toBe("1")
     wrapper.find("#increment-btn").simulate("click")
     expect(wrapper.find("#counter-value").text()).toBe("2")
-    wrapper.find("#squared-btn").simulate("click")
+    wrapper.find("#square-btn").simulate("click")
     expect(wrapper.find("#counter-value").text()).toBe("4")
-    wrapper.find("#squared-btn").simulate("click")
+    wrapper.find("#square-btn").simulate("click")
     expect(wrapper.find("#counter-value").text()).toBe("16")
   })
 
