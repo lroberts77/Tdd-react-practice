@@ -13,6 +13,7 @@ export default function Counter() {
       {/* <button id="square-btn" onClick={() => setcounter( counter * counter )}>Square</button> */}
       <div id="counter-valueb">{counterb}</div>
       <button id="increment-btn" onClick={() => setcounterb( counterb + 1 )}>+1</button>
+      <button id="decrement-btn" onClick={() => setcounterb( counterb - 1 )}>-1</button>
     </div>
   )
 }
