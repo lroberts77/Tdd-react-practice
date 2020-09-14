@@ -16,11 +16,11 @@ describe("Counter Testing", () => {
   })
 
   test("render a button with text of increment", () => {
-    expect(wrapper.find("#increment-btn").text()).toBe("Increment");
+    expect(wrapper.find("#increment-btna").text()).toBe("Increment");
   })
 
   test("render a button with text of decrement", () => {
-    expect(wrapper.find("#decrement-btn").text()).toBe("Decrement");
+    expect(wrapper.find("#decrement-btna").text()).toBe("Decrement");
   })
 
   test("render the initial value of state in a div", () => {
@@ -28,42 +28,42 @@ describe("Counter Testing", () => {
   })
 
   test("render a button with text of reset", () => {
-    expect(wrapper.find("#reset-btn").text()).toBe("Reset");
+    expect(wrapper.find("#reset-btna").text()).toBe("Reset");
   })
 
   test("render a button with text of square", () => {
-    expect(wrapper.find("#square-btn").text()).toBe("Square");
+    expect(wrapper.find("#square-btna").text()).toBe("Square");
   })
 
-  test("render the click event of increment-btn and increment counter value", () => {
-    wrapper.find("#increment-btn").simulate("click")
+  test("render the click event of increment-btna and increment counter value", () => {
+    wrapper.find("#increment-btna").simulate("click")
     expect(wrapper.find("#counter-value").text()).toBe("1")
   })
 
-  test("render the click event of decrement-btn and decrement counter value", () => {
-    wrapper.find("#increment-btn").simulate("click")
+  test("render the click event of decrement-btna and decrement counter value", () => {
+    wrapper.find("#increment-btna").simulate("click")
     expect(wrapper.find("#counter-value").text()).toBe("1")
-    wrapper.find("#decrement-btn").simulate("click")
+    wrapper.find("#decrement-btna").simulate("click")
     expect(wrapper.find("#counter-value").text()).toBe("0")
   })
 
-  test("render the click event of squared-btn and square counter value", () => {
-    wrapper.find("#increment-btn").simulate("click")
+  test("render the click event of squared-btna and square counter value", () => {
+    wrapper.find("#increment-btna").simulate("click")
     expect(wrapper.find("#counter-value").text()).toBe("1")
-    wrapper.find("#increment-btn").simulate("click")
+    wrapper.find("#increment-btna").simulate("click")
     expect(wrapper.find("#counter-value").text()).toBe("2")
-    wrapper.find("#square-btn").simulate("click")
+    wrapper.find("#square-btna").simulate("click")
     expect(wrapper.find("#counter-value").text()).toBe("4")
-    wrapper.find("#square-btn").simulate("click")
+    wrapper.find("#square-btna").simulate("click")
     expect(wrapper.find("#counter-value").text()).toBe("16")
   })
 
-  test("render the click event of reset-btn and reset counter value", () => {
-    wrapper.find("#increment-btn").simulate("click")
+  test("render the click event of reset-btna and reset counter value", () => {
+    wrapper.find("#increment-btna").simulate("click")
     expect(wrapper.find("#counter-value").text()).toBe("1")
-    wrapper.find("#increment-btn").simulate("click")
+    wrapper.find("#increment-btna").simulate("click")
     expect(wrapper.find("#counter-value").text()).toBe("2")
-    wrapper.find("#reset-btn").simulate("click")
+    wrapper.find("#reset-btna").simulate("click")
     expect(wrapper.find("#counter-value").text()).toBe("0")
   });
 });
@@ -74,10 +74,10 @@ describe("counter test mount", () => {
     wrapper = mount(<App />);
   })
 
-    test("render the click event of decrement-btn and decrement counter value", () => {
-      wrapper.find("#increment-btn").simulate("click")
+    test("render the click event of decrement-btna and decrement counter value", () => {
+      wrapper.find("#increment-btna").simulate("click")
       expect(wrapper.find("#counter-value").text()).toBe("1")
-      wrapper.find("#decrement-btn").simulate("click")
+      wrapper.find("#decrement-btna").simulate("click")
       expect(wrapper.find("#counter-value").text()).toBe("0")
     })
 
