@@ -6,7 +6,7 @@ export default function Counter() {
   return(
     <div>
       <h1>Score</h1>
-      <div id="counter-value">{countera}</div>
+      <div id="counter-valuea">{countera}</div>
       <button id="increment-btna" onClick={() => setcountera( countera + 1 )}>+1</button>
       <button id="decrement-btna" onClick={() => setcountera( countera - 1 )}>-1</button>
       <button id="reset-btn" onClick={() => setcountera( countera = 0 )}>Reset</button>
