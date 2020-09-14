@@ -12,7 +12,7 @@ describe("Counter Testing", () => {
   })
 
   test("render the title of counter", () => {
-    expect(wrapper.find("h1").text()).toContain("Counter app");
+    expect(wrapper.find("h1").text()).toContain("Score");
   })
 
   test("render a button with text of increment", () => {
