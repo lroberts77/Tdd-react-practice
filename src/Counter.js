@@ -9,12 +9,12 @@ export default function Counter() {
       <div id="counter-valuea">{countera}</div>
       <button id="increment-btna" onClick={() => setcountera( countera + 1 )}>+1</button>
       <button id="decrement-btna" onClick={() => setcountera( countera - 1 )}>-1</button>
-      <button id="reset-btn" onClick={() => setcountera( countera = 0 )}>Reset</button>
+      <button id="reset-btna" onClick={() => setcountera( countera = 0 )}>Reset</button>
       {/* <button id="square-btn" onClick={() => setcounter( counter * counter )}>Square</button> */}
       <div id="counter-valueb">{counterb}</div>
       <button id="increment-btnb" onClick={() => setcounterb( counterb + 1 )}>+1</button>
       <button id="decrement-btnb" onClick={() => setcounterb( counterb - 1 )}>-1</button>
-      <button id="reset-btn" onClick={() => setcounterb( counterb = 0 )}>Reset</button>
+      <button id="reset-btnb" onClick={() => setcounterb( counterb = 0 )}>Reset</button>
     </div>
   )
 }
