@@ -20,7 +20,7 @@ describe("Counter Testing", () => {
   })
 
   test("render a button with text of decrement", () => {
-    expect(wrapper.find("#decrement-btna").text()).toBe("Decrement");
+    expect(wrapper.find("#decrement-btna").text()).toBe("-1");
   })
 
   test("render the initial value of state in a div", () => {
