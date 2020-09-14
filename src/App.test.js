@@ -31,9 +31,9 @@ describe("Counter Testing", () => {
     expect(wrapper.find("#reset-btna").text()).toBe("Reset");
   })
 
-  test("render a button with text of square", () => {
-    expect(wrapper.find("#square-btna").text()).toBe("Square");
-  })
+  // test("render a button with text of square", () => {
+  //   expect(wrapper.find("#square-btna").text()).toBe("Square");
+  // })
 
   test("render the click event of increment-btna and increment counter value", () => {
     wrapper.find("#increment-btna").simulate("click")
@@ -47,16 +47,16 @@ describe("Counter Testing", () => {
     expect(wrapper.find("#counter-value").text()).toBe("0")
   })
 
-  test("render the click event of squared-btna and square counter value", () => {
-    wrapper.find("#increment-btna").simulate("click")
-    expect(wrapper.find("#counter-value").text()).toBe("1")
-    wrapper.find("#increment-btna").simulate("click")
-    expect(wrapper.find("#counter-value").text()).toBe("2")
-    wrapper.find("#square-btna").simulate("click")
-    expect(wrapper.find("#counter-value").text()).toBe("4")
-    wrapper.find("#square-btna").simulate("click")
-    expect(wrapper.find("#counter-value").text()).toBe("16")
-  })
+  // test("render the click event of squared-btna and square counter value", () => {
+  //   wrapper.find("#increment-btna").simulate("click")
+  //   expect(wrapper.find("#counter-value").text()).toBe("1")
+  //   wrapper.find("#increment-btna").simulate("click")
+  //   expect(wrapper.find("#counter-value").text()).toBe("2")
+  //   wrapper.find("#square-btna").simulate("click")
+  //   expect(wrapper.find("#counter-value").text()).toBe("4")
+  //   wrapper.find("#square-btna").simulate("click")
+  //   expect(wrapper.find("#counter-value").text()).toBe("16")
+  // })
 
   test("render the click event of reset-btna and reset counter value", () => {
     wrapper.find("#increment-btna").simulate("click")
