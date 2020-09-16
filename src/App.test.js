@@ -27,6 +27,7 @@ describe("Counter Testing", () => {
 
   test("render the initial value of state in a div", () => {
     expect(wrapper.find("#counter-valuea").text()).toBe("0");
+    expect(wrapper.find("#counter-valueb").text()).toBe("0");
   })
 
   test("render a button with text of reset", () => {
