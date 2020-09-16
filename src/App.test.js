@@ -32,6 +32,7 @@ describe("Counter Testing", () => {
 
   test("render a button with text of reset", () => {
     expect(wrapper.find("#reset-btna").text()).toBe("Reset");
+    expect(wrapper.find("#reset-btnb").text()).toBe("Reset");
   })
 
   // test("render a button with text of square", () => {
