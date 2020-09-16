@@ -58,13 +58,13 @@ describe("Counter Testing", () => {
   //   expect(wrapper.find("#counter-value").text()).toBe("16")
   // })
 
-  test("render the click event of reset-btna and reset counter value", () => {
+  test("render the click event of reset-btna and reset counter valuea", () => {
     wrapper.find("#increment-btna").simulate("click")
-    expect(wrapper.find("#counter-value").text()).toBe("1")
+    expect(wrapper.find("#counter-valuea").text()).toBe("1")
     wrapper.find("#increment-btna").simulate("click")
-    expect(wrapper.find("#counter-value").text()).toBe("2")
+    expect(wrapper.find("#counter-valuea").text()).toBe("2")
     wrapper.find("#reset-btna").simulate("click")
-    expect(wrapper.find("#counter-value").text()).toBe("0")
+    expect(wrapper.find("#counter-valuea").text()).toBe("0")
   });
 });
 
