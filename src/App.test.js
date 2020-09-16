@@ -40,11 +40,11 @@ describe("Counter Testing", () => {
     expect(wrapper.find("#counter-valuea").text()).toBe("1")
   })
 
-  test("render the click event of decrement-btna and decrement counter value", () => {
+  test("render the click event of decrement-btna and decrement counter valuea", () => {
     wrapper.find("#increment-btna").simulate("click")
-    expect(wrapper.find("#counter-value").text()).toBe("1")
+    expect(wrapper.find("#counter-valuea").text()).toBe("1")
     wrapper.find("#decrement-btna").simulate("click")
-    expect(wrapper.find("#counter-value").text()).toBe("0")
+    expect(wrapper.find("#counter-valuea").text()).toBe("0")
   })
 
   // test("render the click event of squared-btna and square counter value", () => {
