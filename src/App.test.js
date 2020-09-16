@@ -17,11 +17,12 @@ describe("Counter Testing", () => {
 
   test("render a button with text of increment", () => {
     expect(wrapper.find("#increment-btna").text()).toBe("+1");
-  })
-
-  test("render a button with text of increment", () => {
     expect(wrapper.find("#increment-btnb").text()).toBe("+1");
   })
+
+  // test("render a button with text of increment", () => {
+  //   expect(wrapper.find("#increment-btnb").text()).toBe("+1");
+  // })
 
   test("render a button with text of decrement", () => {
     expect(wrapper.find("#decrement-btna").text()).toBe("-1");
