@@ -39,9 +39,11 @@ describe("Counter Testing", () => {
   //   expect(wrapper.find("#square-btna").text()).toBe("Square");
   // })
 
-  test("render the click event of increment-btna and increment counter valuea", () => {
+  test("render the click event of increment-btn and increment counter value", () => {
     wrapper.find("#increment-btna").simulate("click")
     expect(wrapper.find("#counter-valuea").text()).toBe("1")
+    wrapper.find("#increment-btnbb").simulate("click")
+    expect(wrapper.find("#counter-valueb").text()).toBe("1")
   })
 
   test("render the click event of decrement-btna and decrement counter valuea", () => {
