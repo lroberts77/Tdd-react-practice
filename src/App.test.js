@@ -27,6 +27,10 @@ describe("Counter Testing", () => {
     expect(wrapper.find("#decrement-btna").text()).toBe("-1");
   })
 
+  test("render a button with text of decrement", () => {
+    expect(wrapper.find("#decrement-btnb").text()).toBe("-1");
+  })
+
   test("render the initial value of state in a div", () => {
     expect(wrapper.find("#counter-valuea").text()).toBe("0");
   })
