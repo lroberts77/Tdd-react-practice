@@ -19,6 +19,10 @@ describe("Counter Testing", () => {
     expect(wrapper.find("#increment-btna").text()).toBe("+1");
   })
 
+  test("render a button with text of increment", () => {
+    expect(wrapper.find("#increment-btnb").text()).toBe("+1");
+  })
+
   test("render a button with text of decrement", () => {
     expect(wrapper.find("#decrement-btna").text()).toBe("-1");
   })
@@ -76,9 +80,9 @@ describe("counter test mount", () => {
 
     test("render the click event of decrement-btna and decrement counter value", () => {
       wrapper.find("#increment-btna").simulate("click")
-      expect(wrapper.find("#counter-value").text()).toBe("1")
+      expect(wrapper.find("#counter-valuea").text()).toBe("1")
       wrapper.find("#decrement-btna").simulate("click")
-      expect(wrapper.find("#counter-value").text()).toBe("0")
+      expect(wrapper.find("#counter-valuea").text()).toBe("0")
     })
 
 })
