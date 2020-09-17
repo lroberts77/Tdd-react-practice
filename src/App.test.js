@@ -83,14 +83,14 @@ describe("Counter Testing", () => {
   test("render the click event of reset-btn and reset counter value", () => {
     wrapper.find("#increment-btna").simulate("click")
     expect(wrapper.find("#counter-valuea").text()).toBe("1")
-    wrapper.find("#increment-btna").simulate("click")
-    expect(wrapper.find("#counter-valuea").text()).toBe("2")
+    wrapper.find("#increment3-btna").simulate("click")
+    expect(wrapper.find("#counter-valuea").text()).toBe("4")
     wrapper.find("#reset-btna").simulate("click")
     expect(wrapper.find("#counter-valuea").text()).toBe("0")
     wrapper.find("#increment-btnb").simulate("click")
     expect(wrapper.find("#counter-valueb").text()).toBe("1")
-    wrapper.find("#increment-btnb").simulate("click")
-    expect(wrapper.find("#counter-valueb").text()).toBe("2")
+    wrapper.find("#increment3-btnb").simulate("click")
+    expect(wrapper.find("#counter-valueb").text()).toBe("4")
     wrapper.find("#reset-btnb").simulate("click")
     expect(wrapper.find("#counter-valueb").text()).toBe("0")
   });
