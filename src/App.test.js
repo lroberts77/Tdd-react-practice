@@ -15,12 +15,17 @@ describe("Counter Testing", () => {
     expect(wrapper.find("h1").text()).toContain("Score");
   })
 
-  test("render a button with text of increment", () => {
+  test("render a button with text of +1", () => {
     expect(wrapper.find("#increment-btna").text()).toBe("+1");
     expect(wrapper.find("#increment-btnb").text()).toBe("+1");
   })
 
-  test("render a button with text of decrement", () => {
+  test("render a button with text of +3", () => {
+    expect(wrapper.find("#increment-btna").text()).toBe("+3");
+    expect(wrapper.find("#increment-btnb").text()).toBe("+3");
+  })
+
+  test("render a button with text of -1", () => {
     expect(wrapper.find("#decrement-btna").text()).toBe("-1");
     expect(wrapper.find("#decrement-btnb").text()).toBe("-1");
   })
