@@ -90,11 +90,15 @@ describe("counter test mount", () => {
     wrapper = mount(<App />);
   })
 
-    test("render the click event of decrement-btna and decrement counter value", () => {
+    test("render the click event of decrement-btn and decrement counter value", () => {
       wrapper.find("#increment-btna").simulate("click")
       expect(wrapper.find("#counter-valuea").text()).toBe("1")
       wrapper.find("#decrement-btna").simulate("click")
       expect(wrapper.find("#counter-valuea").text()).toBe("0")
+      wrapper.find("#increment-btnb").simulate("click")
+      expect(wrapper.find("#counter-valueb").text()).toBe("1")
+      wrapper.find("#decrement-btnb").simulate("click")
+      expect(wrapper.find("#counter-valueb").text()).toBe("0")
     })
 
 })
