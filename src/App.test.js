@@ -75,6 +75,12 @@ describe("Counter Testing", () => {
     expect(wrapper.find("#counter-valuea").text()).toBe("2")
     wrapper.find("#reset-btna").simulate("click")
     expect(wrapper.find("#counter-valuea").text()).toBe("0")
+    wrapper.find("#increment-btnb").simulate("click")
+    expect(wrapper.find("#counter-valueb").text()).toBe("1")
+    wrapper.find("#increment-btnb").simulate("click")
+    expect(wrapper.find("#counter-valueb").text()).toBe("2")
+    wrapper.find("#reset-btnb").simulate("click")
+    expect(wrapper.find("#counter-valueb").text()).toBe("0")
   });
 });
 
