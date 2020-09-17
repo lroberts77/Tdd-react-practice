@@ -21,8 +21,8 @@ describe("Counter Testing", () => {
   })
 
   test("render a button with text of +3", () => {
-    expect(wrapper.find("#increment-btna").text()).toBe("+3");
-    expect(wrapper.find("#increment-btnb").text()).toBe("+3");
+    expect(wrapper.find("#increment3-btna").text()).toBe("+3");
+    expect(wrapper.find("#increment3-btnb").text()).toBe("+3");
   })
 
   test("render a button with text of -1", () => {
