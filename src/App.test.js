@@ -51,6 +51,13 @@ describe("Counter Testing", () => {
     expect(wrapper.find("#counter-valueb").text()).toBe("1")
   })
 
+  test("render the click event of increment3-btn and increment counter value", () => {
+    wrapper.find("#increment3-btna").simulate("click")
+    expect(wrapper.find("#counter-valuea").text()).toBe("3")
+    wrapper.find("#increment3-btnb").simulate("click")
+    expect(wrapper.find("#counter-valueb").text()).toBe("3")
+  })
+
   test("render the click event of decrement-btn and decrement counter value", () => {
     wrapper.find("#increment-btna").simulate("click")
     expect(wrapper.find("#counter-valuea").text()).toBe("1")
