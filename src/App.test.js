@@ -15,8 +15,8 @@ describe("Counter Testing", () => {
     expect(wrapper.find("h1").text()).toContain("Score");
   })
 
-  test("render a div with the text timer", () => {
-    expect(wrapper.find("#timer").text()).toContain("TIMER");
+  test("render a div displaying 00:00", () => {
+    expect(wrapper.find("#timer").text()).toContain("00:00");
   })
 
   test("render the title of teams", () => {

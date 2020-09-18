@@ -5,7 +5,7 @@ export default function Counter() {
   var [counterb, setcounterb] = useState(0);
   return(
     <div>
-      <div id="timer">TIMER</div>
+      <div id="timer">00:00</div>
       <h1>Score</h1>
       <div id="team-a">TEAM A</div>
       <div id="counter-valuea">{countera}</div>
