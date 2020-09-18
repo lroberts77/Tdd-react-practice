@@ -6,6 +6,7 @@ export default function Counter() {
   return(
     <div>
       <h1>Score</h1>
+      <div id="team-a">TEAM A</div>
       <div id="counter-valuea">{countera}</div>
       <button id="increment-btna" onClick={() => setcountera( countera + 1 )}>+1</button>
       <button id="increment3-btna" onClick={() => setcountera( countera + 3 )}>+3</button>

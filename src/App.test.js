@@ -16,7 +16,7 @@ describe("Counter Testing", () => {
   })
 
   test("render the title of team a", () => {
-    expect(wrapper.find("team-a").text()).toContain("TEAM A");
+    expect(wrapper.find("#team-a").text()).toContain("TEAM A");
   })
 
   test("render a button with text of +1", () => {
