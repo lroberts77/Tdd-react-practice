@@ -1,8 +1,8 @@
-import React from "react"
+import React, { useState } from "react"
 
 export default function Counter() {
-  var [countera, setcountera] = React.useState(0);
-  var [counterb, setcounterb] = React.useState(0);
+  var [countera, setcountera] = useState(0);
+  var [counterb, setcounterb] = useState(0);
   return(
     <div>
       <h1>Score</h1>

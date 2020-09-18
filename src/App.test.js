@@ -15,6 +15,10 @@ describe("Counter Testing", () => {
     expect(wrapper.find("h1").text()).toContain("Score");
   })
 
+  test("render the title of team a", () => {
+    expect(wrapper.find("team-a").text()).toContain("TEAM A");
+  })
+
   test("render a button with text of +1", () => {
     expect(wrapper.find("#increment-btna").text()).toBe("+1");
     expect(wrapper.find("#increment-btnb").text()).toBe("+1");
