@@ -15,11 +15,8 @@ describe("Counter Testing", () => {
     expect(wrapper.find("h1").text()).toContain("Score");
   })
 
-  test("render the title of team a", () => {
+  test("render the title of teams", () => {
     expect(wrapper.find("#team-a").text()).toContain("TEAM A");
-  })
-
-  test("render the title of team b", () => {
     expect(wrapper.find("#team-b").text()).toContain("TEAM B");
   })
 
