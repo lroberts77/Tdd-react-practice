@@ -34,6 +34,11 @@ describe("Counter Testing", () => {
     expect(wrapper.find("#increment-btnb").text()).toBe("+1");
   })
 
+  test("render a button with text of +1 for fouls", () => {
+    expect(wrapper.find("#foulsplus1-btna").text()).toBe("+1");
+
+  })
+
   test("render a button with text of +3", () => {
     expect(wrapper.find("#increment3-btna").text()).toBe("+3");
     expect(wrapper.find("#increment3-btnb").text()).toBe("+3");
