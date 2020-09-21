@@ -21,13 +21,14 @@ describe("Counter Testing", () => {
 
   test("render a div for number of fouls", () => {
     expect(wrapper.find("#foulsa").text()).toContain("0");
+    expect(wrapper.find("#foulsb").text()).toContain("0");
   })
 
   test("render the title of teams", () => {
     expect(wrapper.find("#team-a").text()).toContain("TEAM A");
     expect(wrapper.find("#team-b").text()).toContain("TEAM B");
   })
-  
+
   test("render a button with text of +1", () => {
     expect(wrapper.find("#increment-btna").text()).toBe("+1");
     expect(wrapper.find("#increment-btnb").text()).toBe("+1");
