@@ -15,7 +15,7 @@ describe("Counter Testing", () => {
     expect(wrapper.find("h1").text()).toContain("Score");
   })
 
-  test("render a div displaying 00:00", () => {
+  test("render a div for the timer displaying 00:00", () => {
     expect(wrapper.find("#timer").text()).toContain("00:00");
   })
 
