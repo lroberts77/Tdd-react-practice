@@ -4,7 +4,8 @@ import "./counter.css";
 export default function Counter() {
   var [countera, setcountera] = useState(0);
   var [counterb, setcounterb] = useState(0);
-  var [foulsa, setfoulsa] = useState(0);
+  var [foulsb, setfoulsb] = useState(0);
+
   return(
     <div>
       <div id="timer">00:00</div>
@@ -23,7 +24,7 @@ export default function Counter() {
       <button id="increment3-btnb" onClick={() => setcounterb( counterb + 3 )}>+3</button>
       <button id="decrement-btnb" onClick={() => setcounterb( counterb - 1 )}>-1</button>
       <button id="reset-btnb" onClick={() => setcounterb( counterb = 0 )}>Reset</button>
-      <div id="foulsb">0</div>
+      <div id="foulsb">{foulsb}</div>
       <button id="foulsplus1-btnb">+1</button>
     </div>
   )
