@@ -4,6 +4,7 @@ import "./counter.css";
 export default function Counter() {
   var [countera, setcountera] = useState(0);
   var [counterb, setcounterb] = useState(0);
+  var [foulsa, setfoulsa] = useState(0);
   return(
     <div>
       <div id="timer">00:00</div>
