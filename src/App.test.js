@@ -70,9 +70,11 @@ describe("Counter Testing", () => {
     expect(wrapper.find("#counter-valueb").text()).toBe("1")
   })
 
-  test("render the click event of foulsplus1-btnb and increment counter value", () => {
+  test("render the click event of foulsplus1-btn and increment counter value", () => {
     wrapper.find("#foulsplus1-btnb").simulate("click")
     expect(wrapper.find("#foulsb").text()).toBe("1")
+    wrapper.find("#foulsplus1-btna").simulate("click")
+    expect(wrapper.find("#foulsa").text()).toBe("1")
   })
 
   test("render the click event of increment3-btn and increment counter value", () => {
