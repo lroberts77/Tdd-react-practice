@@ -25,7 +25,7 @@ export default function Counter() {
       <button id="decrement-btnb" onClick={() => setcounterb( counterb - 1 )}>-1</button>
       <button id="reset-btnb" onClick={() => setcounterb( counterb = 0 )}>Reset</button>
       <div id="foulsb">{foulsb}</div>
-      <button id="foulsplus1-btnb">+1</button>
+      <button id="foulsplus1-btnb" onClick={() => setfoulsb( foulsb + 1)}>+1</button>
     </div>
   )
 }
