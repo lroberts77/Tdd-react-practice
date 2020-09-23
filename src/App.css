@@ -1,12 +1,5 @@
-#timer {
-  text-align: center;
-  font-size: 10rem;
-}
-#score {
-  text-align: center;
-}
-
-#counter-valuea {
-  height: 50%;
+.App {
+  height: 100vh;
+  width: 100vw;
 }
 
