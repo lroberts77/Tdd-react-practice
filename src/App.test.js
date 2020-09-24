@@ -63,6 +63,10 @@ describe("Counter Testing", () => {
     expect(wrapper.find("#fouls-btna").text()).toBe("Reset");
   })
 
+  test("render a button for foulsb with text of reset", () => {
+    expect(wrapper.find("#fouls-btnb").text()).toBe("Reset");
+  })
+
   // test("render a button with text of square", () => {
   //   expect(wrapper.find("#square-btna").text()).toBe("Square");
   // })
