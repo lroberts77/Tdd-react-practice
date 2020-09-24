@@ -20,8 +20,8 @@ describe("Counter Testing", () => {
   })
 
   test("render a div for number of fouls", () => {
-    expect(wrapper.find("#foulsa").text()).toContain("0");
-    expect(wrapper.find("#foulsb").text()).toContain("0");
+    expect(wrapper.find("#fouls-a").text()).toContain("0");
+    expect(wrapper.find("#fouls-b").text()).toContain("0");
   })
 
   test("render the title of teams", () => {
@@ -77,9 +77,9 @@ describe("Counter Testing", () => {
 
   test("render the click event of foulsplus1-btn and increment counter value", () => {
     wrapper.find("#foulsplus1-btnb").simulate("click")
-    expect(wrapper.find("#foulsb").text()).toBe("1")
+    expect(wrapper.find("#fouls-b").text()).toBe("1")
     wrapper.find("#foulsplus1-btna").simulate("click")
-    expect(wrapper.find("#foulsa").text()).toBe("1")
+    expect(wrapper.find("#fouls-a").text()).toBe("1")
   })
 
   test("render the click event of increment3-btn and increment counter value", () => {
@@ -110,6 +110,12 @@ describe("Counter Testing", () => {
   //   wrapper.find("#square-btna").simulate("click")
   //   expect(wrapper.find("#counter-value").text()).toBe("16")
   // })
+  test("render the click event of fouls-btna and reset fouls counter", () => {
+    wrapper.find("#foulsplus1-btna").simulate("click")
+    expect(wrapper.find("#fouls-a").text()).toBe("1")
+    wrapper.find("#fouls-btna").simulate("click")
+    expect(wrapper.find("#fouls-a").text()).toBe("0")
+  })
 
   test("render the click event of reset-btn and reset counter value", () => {
     wrapper.find("#increment-btna").simulate("click")
