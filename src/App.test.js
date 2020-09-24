@@ -61,9 +61,6 @@ describe("Counter Testing", () => {
 
   test("render a button for fouls with text of reset", () => {
     expect(wrapper.find("#fouls-btna").text()).toBe("Reset");
-  })
-
-  test("render a button for foulsb with text of reset", () => {
     expect(wrapper.find("#fouls-btnb").text()).toBe("Reset");
   })
 
