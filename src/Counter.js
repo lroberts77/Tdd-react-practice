@@ -21,6 +21,7 @@ export default function Counter() {
       </div>
       <button id="start">Start</button>
       <button id="stop">Stop</button>
+      <button id="reset-timer">Reset</button>
       <h1 id="score">Score</h1>
       <div id="team-a">TEAM A</div>
       <div id="counter-valuea">{countera}</div>
