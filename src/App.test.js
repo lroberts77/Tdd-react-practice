@@ -161,10 +161,10 @@ describe("counter test mount", () => {
     })
 
     test("render the click event of reset-btna to reset counter value", () => {
-      wrapper.find("#increment3-btna").simulate("click");
-      expect(wrapper.find("#counter-valuea").text()).toBe("3");
-      wrapper.find("#reset-btna").simulate("click");
-      expect(wrapper.find("#counter-valuea").text()).toBe("0");
+      wrapper.find("#increment3-btnb").simulate("click");
+      expect(wrapper.find("#counter-valueb").text()).toBe("3");
+      wrapper.find("#reset-btnb").simulate("click");
+      expect(wrapper.find("#counter-valueb").text()).toBe("0");
 
     })
 
