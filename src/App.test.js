@@ -110,14 +110,11 @@ describe("Counter Testing", () => {
   //   wrapper.find("#square-btna").simulate("click")
   //   expect(wrapper.find("#counter-value").text()).toBe("16")
   // })
-  test("render the click event of fouls-btna and reset fouls counter", () => {
+  test("render the click event of fouls-btn and reset fouls counter", () => {
     wrapper.find("#foulsplus1-btna").simulate("click");
     expect(wrapper.find("#fouls-a").text()).toBe("1");
     wrapper.find("#fouls-btna").simulate("click");
     expect(wrapper.find("#fouls-a").text()).toBe("0");
-  })
-
-  test("render the click event of fouls-btnb and reset fouls counter", () => {
     wrapper.find("#foulsplus1-btnb").simulate("click");
     expect(wrapper.find("#fouls-b").text()).toBe("1");
     wrapper.find("#fouls-btnb").simulate("click");
@@ -146,7 +143,7 @@ describe("counter test mount", () => {
     wrapper = mount(<App />);
   })
 
-    test("render the click event of decrement-btn and decrement counter value", () => {
+    test("render the click event of decrement-btn, decrement and reset counter value", () => {
       wrapper.find("#increment-btna").simulate("click")
       expect(wrapper.find("#counter-valuea").text()).toBe("1")
       wrapper.find("#increment3-btna").simulate("click")
