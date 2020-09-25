@@ -103,9 +103,6 @@ describe("Counter Testing", () => {
   test("counter value doesn't go below 0 when decrement button is clicked", () => {
     wrapper.find("#decrement-btna").simulate("click");
     expect(wrapper.find("#counter-valuea").text()).toBe("0");
-  });
-
-  test("counter valueb doesn't go below 0 when decrement button is clicked", () => {
     wrapper.find("#decrement-btnb").simulate("click");
     expect(wrapper.find("#counter-valueb").text()).toBe("0");
   });
