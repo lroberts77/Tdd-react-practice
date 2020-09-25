@@ -17,7 +17,7 @@ export default function Counter() {
   return(
     <div>
       <div id="timer">
-        <span className="minute">00</span> : <span className="second">00</span>
+        <span className="minute">00</span>:<span className="second">00</span>
       </div>
       <h1 id="score">Score</h1>
       <div id="team-a">TEAM A</div>
