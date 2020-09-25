@@ -150,6 +150,8 @@ describe("counter test mount", () => {
       expect(wrapper.find("#counter-valuea").text()).toBe("4");
       wrapper.find("#decrement-btna").simulate("click");
       expect(wrapper.find("#counter-valuea").text()).toBe("3");
+      wrapper.find("#reset-btna").simulate("click");
+      expect(wrapper.find("#counter-valuea").text()).toBe("0");
       wrapper.find("#increment-btnb").simulate("click");
       expect(wrapper.find("#counter-valueb").text()).toBe("1");
       wrapper.find("#increment3-btnb").simulate("click");
