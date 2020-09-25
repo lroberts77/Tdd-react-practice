@@ -117,6 +117,11 @@ describe("Counter Testing", () => {
     expect(wrapper.find("#fouls-a").text()).toBe("0")
   })
 
+  test("render the click event of fouls-btnb and reset fouls counter", () => {
+    wrapper.find("#foulsplus1-btnb").simulate("click")
+    expect(wrapper.find("#fouls-b").text()).toBe("1")
+  })
+  
   test("render the click event of reset-btn and reset counter value", () => {
     wrapper.find("#increment-btna").simulate("click")
     expect(wrapper.find("#counter-valuea").text()).toBe("1")
