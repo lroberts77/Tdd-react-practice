@@ -158,14 +158,8 @@ describe("counter test mount", () => {
       expect(wrapper.find("#counter-valueb").text()).toBe("4");
       wrapper.find("#decrement-btnb").simulate("click");
       expect(wrapper.find("#counter-valueb").text()).toBe("3");
-    })
-
-    test("render the click event of reset-btna to reset counter value", () => {
-      wrapper.find("#increment3-btnb").simulate("click");
-      expect(wrapper.find("#counter-valueb").text()).toBe("3");
       wrapper.find("#reset-btnb").simulate("click");
       expect(wrapper.find("#counter-valueb").text()).toBe("0");
-
     })
 
 })
