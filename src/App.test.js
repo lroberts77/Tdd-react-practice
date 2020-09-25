@@ -69,35 +69,35 @@ describe("Counter Testing", () => {
   // })
 
   test("render the click event of increment-btn and increment counter value", () => {
-    wrapper.find("#increment-btna").simulate("click")
-    expect(wrapper.find("#counter-valuea").text()).toBe("1")
-    wrapper.find("#increment-btnb").simulate("click")
-    expect(wrapper.find("#counter-valueb").text()).toBe("1")
+    wrapper.find("#increment-btna").simulate("click");
+    expect(wrapper.find("#counter-valuea").text()).toBe("1");
+    wrapper.find("#increment-btnb").simulate("click");
+    expect(wrapper.find("#counter-valueb").text()).toBe("1");
   })
 
   test("render the click event of foulsplus1-btn and increment counter value", () => {
-    wrapper.find("#foulsplus1-btnb").simulate("click")
-    expect(wrapper.find("#fouls-b").text()).toBe("1")
-    wrapper.find("#foulsplus1-btna").simulate("click")
-    expect(wrapper.find("#fouls-a").text()).toBe("1")
+    wrapper.find("#foulsplus1-btnb").simulate("click");
+    expect(wrapper.find("#fouls-b").text()).toBe("1");
+    wrapper.find("#foulsplus1-btna").simulate("click");
+    expect(wrapper.find("#fouls-a").text()).toBe("1");
   })
 
   test("render the click event of increment3-btn and increment counter value", () => {
-    wrapper.find("#increment3-btna").simulate("click")
-    expect(wrapper.find("#counter-valuea").text()).toBe("3")
-    wrapper.find("#increment3-btnb").simulate("click")
-    expect(wrapper.find("#counter-valueb").text()).toBe("3")
+    wrapper.find("#increment3-btna").simulate("click");
+    expect(wrapper.find("#counter-valuea").text()).toBe("3");
+    wrapper.find("#increment3-btnb").simulate("click");
+    expect(wrapper.find("#counter-valueb").text()).toBe("3");
   })
 
   test("render the click event of decrement-btn and decrement counter value", () => {
-    wrapper.find("#increment-btna").simulate("click")
-    expect(wrapper.find("#counter-valuea").text()).toBe("1")
-    wrapper.find("#decrement-btna").simulate("click")
-    expect(wrapper.find("#counter-valuea").text()).toBe("0")
-    wrapper.find("#increment-btnb").simulate("click")
-    expect(wrapper.find("#counter-valueb").text()).toBe("1")
-    wrapper.find("#decrement-btnb").simulate("click")
-    expect(wrapper.find("#counter-valueb").text()).toBe("0")
+    wrapper.find("#increment-btna").simulate("click");
+    expect(wrapper.find("#counter-valuea").text()).toBe("1");
+    wrapper.find("#decrement-btna").simulate("click");
+    expect(wrapper.find("#counter-valuea").text()).toBe("0");
+    wrapper.find("#increment-btnb").simulate("click");
+    expect(wrapper.find("#counter-valueb").text()).toBe("1");
+    wrapper.find("#decrement-btnb").simulate("click");
+    expect(wrapper.find("#counter-valueb").text()).toBe("0");
   })
 
   // test("render the click event of squared-btna and square counter value", () => {
@@ -111,17 +111,19 @@ describe("Counter Testing", () => {
   //   expect(wrapper.find("#counter-value").text()).toBe("16")
   // })
   test("render the click event of fouls-btna and reset fouls counter", () => {
-    wrapper.find("#foulsplus1-btna").simulate("click")
-    expect(wrapper.find("#fouls-a").text()).toBe("1")
-    wrapper.find("#fouls-btna").simulate("click")
-    expect(wrapper.find("#fouls-a").text()).toBe("0")
+    wrapper.find("#foulsplus1-btna").simulate("click");
+    expect(wrapper.find("#fouls-a").text()).toBe("1");
+    wrapper.find("#fouls-btna").simulate("click");
+    expect(wrapper.find("#fouls-a").text()).toBe("0");
   })
 
   test("render the click event of fouls-btnb and reset fouls counter", () => {
-    wrapper.find("#foulsplus1-btnb").simulate("click")
-    expect(wrapper.find("#fouls-b").text()).toBe("1")
+    wrapper.find("#foulsplus1-btnb").simulate("click");
+    expect(wrapper.find("#fouls-b").text()).toBe("1");
+    wrapper.find("#fouls-btnb").simulate("click");
+    expect(wrapper.find("#fouls-b").text()).toBe("0");
   })
-  
+
   test("render the click event of reset-btn and reset counter value", () => {
     wrapper.find("#increment-btna").simulate("click")
     expect(wrapper.find("#counter-valuea").text()).toBe("1")
