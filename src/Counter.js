@@ -20,6 +20,7 @@ export default function Counter() {
         <span className="minute">00</span>:<span className="second">00</span>
       </div>
       <button id="start">Start</button>
+      <button id="stop">Stop</button>
       <h1 id="score">Score</h1>
       <div id="team-a">TEAM A</div>
       <div id="counter-valuea">{countera}</div>
