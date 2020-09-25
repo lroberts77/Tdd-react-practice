@@ -2,6 +2,7 @@ import React, { useState } from "react"
 import "./counter.css";
 
 export default function Counter() {
+
   var [countera, setcountera] = useState(0);
   var [counterb, setcounterb] = useState(0);
   var [foulsb, setfoulsb] = useState(0);

@@ -100,6 +100,11 @@ describe("Counter Testing", () => {
     expect(wrapper.find("#counter-valueb").text()).toBe("0");
   })
 
+  test("counter value doesn't go below 0 when decrement button is clicked", () => {
+    wrapper.find("#decrement-btna").simulate("click");
+    expect(wrapper.find("#counter-valuea").text()).toBe("0");
+  });
+
   // test("render the click event of squared-btna and square counter value", () => {
   //   wrapper.find("#increment-btna").simulate("click")
   //   expect(wrapper.find("#counter-value").text()).toBe("1")
