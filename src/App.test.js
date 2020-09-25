@@ -144,18 +144,26 @@ describe("counter test mount", () => {
   })
 
     test("render the click event of decrement-btn, decrement and reset counter value", () => {
-      wrapper.find("#increment-btna").simulate("click")
-      expect(wrapper.find("#counter-valuea").text()).toBe("1")
-      wrapper.find("#increment3-btna").simulate("click")
-      expect(wrapper.find("#counter-valuea").text()).toBe("4")
-      wrapper.find("#decrement-btna").simulate("click")
-      expect(wrapper.find("#counter-valuea").text()).toBe("3")
-      wrapper.find("#increment-btnb").simulate("click")
-      expect(wrapper.find("#counter-valueb").text()).toBe("1")
-      wrapper.find("#increment3-btnb").simulate("click")
-      expect(wrapper.find("#counter-valueb").text()).toBe("4")
-      wrapper.find("#decrement-btnb").simulate("click")
-      expect(wrapper.find("#counter-valueb").text()).toBe("3")
+      wrapper.find("#increment-btna").simulate("click");
+      expect(wrapper.find("#counter-valuea").text()).toBe("1");
+      wrapper.find("#increment3-btna").simulate("click");
+      expect(wrapper.find("#counter-valuea").text()).toBe("4");
+      wrapper.find("#decrement-btna").simulate("click");
+      expect(wrapper.find("#counter-valuea").text()).toBe("3");
+      wrapper.find("#increment-btnb").simulate("click");
+      expect(wrapper.find("#counter-valueb").text()).toBe("1");
+      wrapper.find("#increment3-btnb").simulate("click");
+      expect(wrapper.find("#counter-valueb").text()).toBe("4");
+      wrapper.find("#decrement-btnb").simulate("click");
+      expect(wrapper.find("#counter-valueb").text()).toBe("3");
+    })
+
+    test("render the click event of reset-btna to reset counter value", () => {
+      wrapper.find("#increment3-btna").simulate("click");
+      expect(wrapper.find("#counter-valuea").text()).toBe("3");
+      wrapper.find("#reset-btna").simulate("click");
+      expect(wrapper.find("#counter-valuea").text()).toBe("0");
+
     })
 
 })
