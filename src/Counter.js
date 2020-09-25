@@ -8,6 +8,9 @@ export default function Counter() {
     countera = 0;
   }
   var [counterb, setcounterb] = useState(0);
+  if(counterb < 1){
+    counterb = 0;
+  }
   var [foulsb, setfoulsb] = useState(0);
   var [foulsa, setfoulsa] = useState(0);
 
