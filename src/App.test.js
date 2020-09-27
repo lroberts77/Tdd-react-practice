@@ -19,6 +19,18 @@ describe("Counter Testing", () => {
     expect(wrapper.find("#timer").text()).toContain("00:00");
   })
 
+  test("render a button with the text Start", () => {
+    expect(wrapper.find("#start").text()).toContain("Start");
+  })
+
+  test("render a button with the text Stop", () => {
+    expect(wrapper.find("#stop").text()).toContain("Stop");
+  })
+
+  test("render a button with the text Reset", () => {
+    expect(wrapper.find("#reset-timer").text()).toContain("Reset");
+  })
+
   test("render a div for number of fouls", () => {
     expect(wrapper.find("#fouls-a").text()).toContain("0");
     expect(wrapper.find("#fouls-b").text()).toContain("0");
