@@ -22,10 +22,6 @@
 #counter-valueb {
   font-family: Orbitron;
 }
-#fouls-a {
-  font-family: Orbitron;
-}
-
-#fouls-b {
+#fouls-a, #fouls-b {
   font-family: Orbitron;
 }
