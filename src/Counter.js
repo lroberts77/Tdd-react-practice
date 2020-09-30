@@ -17,7 +17,7 @@ export default function Counter() {
   var [seconds, setseconds] = useState(0);
   seconds = seconds < 10 ? '0' + seconds : seconds
   // const [minutes, setminutes] = useState(0);
-  const [isRunning, setIsRunning] = useState(false);
+  var [isRunning, setIsRunning] = useState(false);
 
   useEffect(() => {
     if (isRunning) {
@@ -47,7 +47,10 @@ export default function Counter() {
       </button>
         )
       }
-      <button id="reset-timer" onClick={() => setseconds( seconds = 0 )}>Reset</button>
+      <button id="reset-timer" onClick={() => {
+        setseconds( seconds = 0 );
+        setIsRunning( isRunning = false);
+      }}>Reset</button>
       </div>
       <h1 id="score">Score</h1>
       <div id="team-a">TEAM A</div>
