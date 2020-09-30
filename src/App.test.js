@@ -19,6 +19,10 @@ describe("Counter Testing", () => {
     expect(wrapper.find('div.timer').text()).toContain("00:00");
   })
 
+  test("render a button to increment the timer by 10 seconds", () => {
+    expect(wrapper.find("#timerPlus10s").text()).toContain("+10s");
+  })
+
   test("render a button with the text Start", () => {
     expect(wrapper.find("#start-stop").text()).toContain("Start");
   })
@@ -184,6 +188,13 @@ describe("counter test mount", () => {
     test("render a button with the text Stop", () => {
       wrapper.find("#start-stop").simulate("click")
       expect(wrapper.find("#start-stop").text()).toContain("Stop");
+    })
+
+    test("timer is reset to 00:00 when reset-timer is clicked", () => {
+      wrapper.find("#start-stop").simulate("click")
+      wrapper.find("#start-stop").simulate("click")
+      wrapper.find("#reset-timer").simulate("click")
+      expect(wrapper.find("div.timer").text()).toContain("00:00");
     })
 
 })
