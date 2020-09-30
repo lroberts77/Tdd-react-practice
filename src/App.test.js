@@ -20,7 +20,7 @@ describe("Counter Testing", () => {
   })
 
   test("render a button with the text Start", () => {
-    expect(wrapper.find("#start").text()).toContain("Start");
+    expect(wrapper.find("#start-stop").text()).toContain("Start");
   })
 
   test("render a button with the text Stop", () => {
