@@ -186,4 +186,11 @@ describe("counter test mount", () => {
       expect(wrapper.find("#start-stop").text()).toContain("Stop");
     })
 
+    test("timer is reset to 00:00 when reset-timer is clicked", () => {
+      wrapper.find("#start-stop").simulate("click")
+      wrapper.find("#start-stop").simulate("click")
+      wrapper.find("#reset-timer").simulate("click")
+      expect(wrapper.find("div.timer").text()).toContain("00:00");
+    })
+
 })
