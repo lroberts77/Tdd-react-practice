@@ -14,7 +14,8 @@ export default function Counter() {
   var [foulsb, setfoulsb] = useState(0);
   var [foulsa, setfoulsa] = useState(0);
 
-  const [seconds, setseconds] = useState(5);
+  var [seconds, setseconds] = useState(5);
+  seconds = seconds < 10 ? '0' + seconds : seconds
   // const [minutes, setminutes] = useState(0);
   const [isRunning, setIsRunning] = useState(false);
 
