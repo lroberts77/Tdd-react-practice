@@ -47,7 +47,7 @@ export default function Counter() {
       </button>
         )
       }
-      <button id="reset-timer">Reset</button>
+      <button id="reset-timer" onClick={() => setseconds( seconds = 0 )}>Reset</button>
       </div>
       <h1 id="score">Score</h1>
       <div id="team-a">TEAM A</div>
