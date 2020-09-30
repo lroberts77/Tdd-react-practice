@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import "./counter.css";
 
 export default function Counter() {
@@ -14,14 +14,40 @@ export default function Counter() {
   var [foulsb, setfoulsb] = useState(0);
   var [foulsa, setfoulsa] = useState(0);
 
+  const [seconds, setseconds] = useState(5);
+  // const [minutes, setminutes] = useState(0);
+  const [isRunning, setIsRunning] = useState(false);
+
+  useEffect(() => {
+    if (isRunning) {
+      const id = window.setInterval(() => {
+        setseconds(seconds => seconds + 1);
+      }, 1000);
+      return () => window.clearInterval(id);
+    }
+    return undefined;
+  }, [isRunning]);
+
   return(
     <div>
-      <div id="timer">
-        <span className="minute">00</span>:<span className="second">00</span>
+      <div className="timer">
+        <span className="minutes">00</span>:<span className="seconds">{seconds}</span>
       </div>
-      <button id="start">Start</button>
-      <button id="stop">Stop</button>
+      <div className="buttons">
+        {isRunning
+        ? (
+      <button id="start-stop" onClick={() => {
+        setIsRunning(false);
+      }}>Stop
+      </button>
+        ) : (
+      <button id="start-stop" onClick={() => setIsRunning(true)}>
+      Start
+      </button>
+        )
+      }
       <button id="reset-timer">Reset</button>
+      </div>
       <h1 id="score">Score</h1>
       <div id="team-a">TEAM A</div>
       <div id="counter-valuea">{countera}</div>
