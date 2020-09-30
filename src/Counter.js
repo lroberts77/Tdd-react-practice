@@ -31,6 +31,7 @@ export default function Counter() {
 
   return(
     <div>
+      <button id="timerPlus10s">+10s</button>
       <div className="timer">
         <span className="minutes">00</span>:<span className="seconds">{seconds}</span>
       </div>
