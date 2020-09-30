@@ -23,9 +23,9 @@ describe("Counter Testing", () => {
     expect(wrapper.find("#start-stop").text()).toContain("Start");
   })
 
-  test("render a button with the text Stop", () => {
-    expect(wrapper.find("#stop").text()).toContain("Stop");
-  })
+  // test("render a button with the text Stop", () => {
+  //   expect(wrapper.find("#start-stop").text()).toContain("Stop");
+  // })
 
   test("render a button with the text Reset", () => {
     expect(wrapper.find("#reset-timer").text()).toContain("Reset");
@@ -179,6 +179,11 @@ describe("counter test mount", () => {
       expect(wrapper.find("#counter-valueb").text()).toBe("3");
       wrapper.find("#reset-btnb").simulate("click");
       expect(wrapper.find("#counter-valueb").text()).toBe("0");
+    })
+
+    test("render a button with the text Stop", () => {
+      wrapper.find("#start-stop").simulate("click")
+      expect(wrapper.find("#start-stop").text()).toContain("Stop");
     })
 
 })
