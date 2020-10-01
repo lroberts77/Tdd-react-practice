@@ -88,6 +88,11 @@ describe("Counter Testing", () => {
     expect(wrapper.find("#counter-valueb").text()).toBe("1");
   })
 
+  test("render the click event of timerPlus10s and increment timer value", () => {
+    wrapper.find("#timerPlus10s").simulate("click");
+    expect(wrapper.find("#sec").text()).toBe("15");
+  })
+
   test("render the click event of foulsplus1-btn and increment counter value", () => {
     wrapper.find("#foulsplus1-btnb").simulate("click");
     expect(wrapper.find("#fouls-b").text()).toBe("1");
