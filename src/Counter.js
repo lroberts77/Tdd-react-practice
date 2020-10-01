@@ -32,7 +32,7 @@ export default function Counter() {
   return(
     <div>
       <button id="timerPlus10s" onClick={() => setseconds( seconds => seconds + 10 )}>+10s</button>
-      <button id="timerMinus10s">-10s</button>
+      <button id="timerMinus10s" onClick={() => setseconds( seconds => seconds - 10 )}>-10s</button>
       <div className="timer">
         <span id="min" className="minutes">00</span>:<span id="sec" className="seconds">{seconds}</span>
       </div>
