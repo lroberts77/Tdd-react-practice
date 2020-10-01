@@ -90,7 +90,7 @@ describe("Counter Testing", () => {
 
   test("render the click event of timerPlus10s and increment timer value", () => {
     wrapper.find("#timerPlus10s").simulate("click");
-    expect(wrapper.find("#sec").text()).toBe("15");
+    expect(wrapper.find("#sec").text()).toBe("10");
   })
 
   test("render the click event of foulsplus1-btn and increment counter value", () => {
