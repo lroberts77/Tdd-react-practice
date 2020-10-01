@@ -19,17 +19,14 @@ describe("Counter Testing", () => {
     expect(wrapper.find('div.timer').text()).toContain("00:00");
   })
 
-  test("render a button to increment the timer by 10 seconds", () => {
+  test("render buttons to increment and decrement the timer by 10 seconds", () => {
     expect(wrapper.find("#timerPlus10s").text()).toContain("+10s");
+    expect(wrapper.find("#timerMinus10s").text()).toContain("-10s");
   })
 
   test("render a button with the text Start", () => {
     expect(wrapper.find("#start-stop").text()).toContain("Start");
   })
-
-  // test("render a button with the text Stop", () => {
-  //   expect(wrapper.find("#start-stop").text()).toContain("Stop");
-  // })
 
   test("render a button with the text Reset", () => {
     expect(wrapper.find("#reset-timer").text()).toContain("Reset");
@@ -90,6 +87,15 @@ describe("Counter Testing", () => {
     wrapper.find("#increment-btnb").simulate("click");
     expect(wrapper.find("#counter-valueb").text()).toBe("1");
   })
+
+  test("render the click event of timerPlus10s, timerMinus10s to adjust timer value", () => {
+    wrapper.find("#timerPlus10s").simulate("click");
+    expect(wrapper.find("#sec").text()).toBe("10");
+    wrapper.find("#timerMinus10s").simulate("click");
+    expect(wrapper.find("#sec").text()).toBe("00");
+  })
+
+
 
   test("render the click event of foulsplus1-btn and increment counter value", () => {
     wrapper.find("#foulsplus1-btnb").simulate("click");
