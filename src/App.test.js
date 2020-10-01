@@ -23,13 +23,13 @@ describe("Counter Testing", () => {
     expect(wrapper.find("#timerPlus10s").text()).toContain("+10s");
   })
 
+  test("render a button to decrement the timer by 10 seconds", () => {
+    expect(wrapper.find("#timerMinus10s").text()).toContain("-10s");
+  })
+
   test("render a button with the text Start", () => {
     expect(wrapper.find("#start-stop").text()).toContain("Start");
   })
-
-  // test("render a button with the text Stop", () => {
-  //   expect(wrapper.find("#start-stop").text()).toContain("Stop");
-  // })
 
   test("render a button with the text Reset", () => {
     expect(wrapper.find("#reset-timer").text()).toContain("Reset");
