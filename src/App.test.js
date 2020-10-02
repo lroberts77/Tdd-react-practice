@@ -15,7 +15,7 @@ describe("Counter Testing", () => {
     expect(wrapper.find("h1").text()).toContain("Score");
   })
 
-  test("render a div for the timer displaying 00:00", () => {
+  test("render a div for the timer displaying 0:00", () => {
     expect(wrapper.find('div.timer').text()).toContain("0:00");
   })
 
@@ -196,11 +196,11 @@ describe("counter test mount", () => {
       expect(wrapper.find("#start-stop").text()).toContain("Stop");
     })
 
-    test("timer is reset to 00:00 when reset-timer is clicked", () => {
+    test("timer is reset to 0:00 when reset-timer is clicked", () => {
       wrapper.find("#start-stop").simulate("click")
       wrapper.find("#start-stop").simulate("click")
       wrapper.find("#reset-timer").simulate("click")
-      expect(wrapper.find("div.timer").text()).toContain("00:00");
+      expect(wrapper.find("div.timer").text()).toContain("0:00");
     })
 
 })
