@@ -16,7 +16,7 @@ describe("Counter Testing", () => {
   })
 
   test("render a div for the timer displaying 00:00", () => {
-    expect(wrapper.find('div.timer').text()).toContain("00:00");
+    expect(wrapper.find('div.timer').text()).toContain("0:00");
   })
 
   test("render buttons to increment and decrement the timer by 10 seconds", () => {
