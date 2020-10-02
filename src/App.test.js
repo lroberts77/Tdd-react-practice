@@ -15,13 +15,17 @@ describe("Counter Testing", () => {
     expect(wrapper.find("h1").text()).toContain("Score");
   })
 
-  test("render a div for the timer displaying 00:00", () => {
-    expect(wrapper.find('div.timer').text()).toContain("00:00");
+  test("render a div for the timer displaying 0:00", () => {
+    expect(wrapper.find('div.timer').text()).toContain("0:00");
   })
 
   test("render buttons to increment and decrement the timer by 10 seconds", () => {
     expect(wrapper.find("#timerPlus10s").text()).toContain("+10s");
     expect(wrapper.find("#timerMinus10s").text()).toContain("-10s");
+  })
+
+  test("render button to increment the timer by 1 minute", () => {
+    expect(wrapper.find("#timerPlus1min").text()).toContain("+1 min");
   })
 
   test("render a button with the text Start", () => {
@@ -196,11 +200,11 @@ describe("counter test mount", () => {
       expect(wrapper.find("#start-stop").text()).toContain("Stop");
     })
 
-    test("timer is reset to 00:00 when reset-timer is clicked", () => {
+    test("timer is reset to 0:00 when reset-timer is clicked", () => {
       wrapper.find("#start-stop").simulate("click")
       wrapper.find("#start-stop").simulate("click")
       wrapper.find("#reset-timer").simulate("click")
-      expect(wrapper.find("div.timer").text()).toContain("00:00");
+      expect(wrapper.find("div.timer").text()).toContain("0:00");
     })
 
 })

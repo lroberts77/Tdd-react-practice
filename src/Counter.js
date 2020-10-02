@@ -15,26 +15,43 @@ export default function Counter() {
   var [foulsa, setfoulsa] = useState(0);
 
   var [seconds, setseconds] = useState(0);
-  seconds = seconds < 10 ? '0' + seconds : seconds
-  // const [minutes, setminutes] = useState(0);
+  seconds = seconds < 10 ? '0' + seconds : seconds;
+  var [minutes, setminutes] = useState(0);
+
+  if(seconds > '59') {
+    setseconds(seconds = seconds % 10);
+    setminutes( minutes + 1);
+  }
+
+  if(seconds < '00' && minutes !== 0 ) {
+    setseconds(seconds = 59)
+    setminutes( minutes - 1);
+  }   
+
   var [isRunning, setIsRunning] = useState(false);
 
   useEffect(() => {
     if (isRunning) {
-      const id = window.setInterval(() => {
-        setseconds(seconds => seconds + 1);
+      var id = window.setInterval(() => {
+        setseconds(seconds => seconds - 1);
       }, 1000);
       return () => window.clearInterval(id);
     }
     return undefined;
   }, [isRunning]);
+  
+  if(minutes === 0 && seconds < '00' ) {
+    setseconds( seconds = 0 );
+    setminutes( minutes = 0 );
+    setIsRunning(false);
+  }
 
   return(
     <div>
       <button id="timerPlus10s" onClick={() => setseconds( seconds => seconds + 10 )}>+10s</button>
       <button id="timerMinus10s" onClick={() => setseconds( seconds => seconds - 10 )}>-10s</button>
       <div className="timer">
-        <span id="min" className="minutes">00</span>:<span id="sec" className="seconds">{seconds}</span>
+        <span id="min" className="minutes">{minutes}</span>:<span id="sec" className="seconds">{seconds}</span>
       </div>
       <div className="buttons">
         {isRunning
@@ -51,7 +68,8 @@ export default function Counter() {
       }
       <button id="reset-timer" onClick={() => {
         setseconds( seconds = 0 );
-        setIsRunning( isRunning = false);
+        setminutes( minutes = 0 );
+        setIsRunning(false);
       }}>Reset</button>
       </div>
       <h1 id="score">Score</h1>
