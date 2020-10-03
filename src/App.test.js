@@ -105,6 +105,13 @@ describe("Counter Testing", () => {
     expect(wrapper.find("#min").text()).toBe("1");
   })
 
+  test("render the click event of timerMinus1min to adjust timer value", () => {
+    wrapper.find("#timerPlus1min").simulate("click");
+    expect(wrapper.find("#min").text()).toBe("1");
+    wrapper.find("#timerMinus1min").simulate("click");
+    expect(wrapper.find("#min").text()).toBe("0");
+  })
+
   test("render the click event of foulsplus1-btn and increment counter value", () => {
     wrapper.find("#foulsplus1-btnb").simulate("click");
     expect(wrapper.find("#fouls-b").text()).toBe("1");
