@@ -15,20 +15,29 @@ export default function Counter() {
   var [foulsa, setfoulsa] = useState(0);
 
   var [seconds, setseconds] = useState(0);
-  seconds = seconds < 10 ? '0' + seconds : seconds;
   var [minutes, setminutes] = useState(0);
+  if(minutes < 0 ) {
+    setminutes( minutes = 0 );
+  }
+
+  var [isRunning, setIsRunning] = useState(false);
+
+  seconds = seconds < 10 ? '0' + seconds : seconds;
 
   if(seconds > '59') {
     setseconds(seconds = seconds % 10);
     setminutes( minutes + 1);
   }
 
-  if(seconds < '00' && minutes !== 0 ) {
+  if(isRunning && seconds < '00' && minutes !== 0 ) {
     setseconds(seconds = 59)
     setminutes( minutes - 1);
-  }   
+  } 
 
-  var [isRunning, setIsRunning] = useState(false);
+  if(isRunning === false && seconds < '00' && minutes !== 0 ) {
+    setseconds(seconds = 50);
+    setminutes( minutes - 1);
+  } 
 
   useEffect(() => {
     if (isRunning) {
@@ -49,7 +58,9 @@ export default function Counter() {
   return(
     <div>
       <button id="timerPlus10s" onClick={() => setseconds( seconds => seconds + 10 )}>+10s</button>
+      <button id="timerPlus1min" onClick={() => setminutes( minutes => minutes + 1 )}>+1 min</button>
       <button id="timerMinus10s" onClick={() => setseconds( seconds => seconds - 10 )}>-10s</button>
+      <button id="timerMinus1min" onClick={() => setminutes( minutes => minutes - 1 )}>-1 min</button>
       <div className="timer">
         <span id="min" className="minutes">{minutes}</span>:<span id="sec" className="seconds">{seconds}</span>
       </div>
