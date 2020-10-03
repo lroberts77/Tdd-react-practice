@@ -17,6 +17,9 @@ export default function Counter() {
   var [seconds, setseconds] = useState(0);
   seconds = seconds < 10 ? '0' + seconds : seconds;
   var [minutes, setminutes] = useState(0);
+  if(minutes < 0 ) {
+    setminutes( minutes = 0 );
+  }
 
   var [isRunning, setIsRunning] = useState(false);
 
