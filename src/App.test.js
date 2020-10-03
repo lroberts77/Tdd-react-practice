@@ -24,11 +24,8 @@ describe("Counter Testing", () => {
     expect(wrapper.find("#timerMinus10s").text()).toContain("-10s");
   })
 
-  test("render button to increment the timer by 1 minute", () => {
+  test("render buttons to adjust the timer by 1 minute", () => {
     expect(wrapper.find("#timerPlus1min").text()).toContain("+1 min");
-  })
-
-  test("render button to decrement the timer by 1 minute", () => {
     expect(wrapper.find("#timerMinus1min").text()).toContain("-1 min");
   })
 
