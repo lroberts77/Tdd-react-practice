@@ -100,12 +100,7 @@ describe("Counter Testing", () => {
     expect(wrapper.find("#sec").text()).toBe("00");
   })
 
-  test("render the click event of timerPlus1min to adjust timer value", () => {
-    wrapper.find("#timerPlus1min").simulate("click");
-    expect(wrapper.find("#min").text()).toBe("1");
-  })
-
-  test("render the click event of timerMinus1min to adjust timer value", () => {
+  test("render the click event of timerPlus1min and timerMinus1min to adjust timer value", () => {
     wrapper.find("#timerPlus1min").simulate("click");
     expect(wrapper.find("#min").text()).toBe("1");
     wrapper.find("#timerMinus1min").simulate("click");
