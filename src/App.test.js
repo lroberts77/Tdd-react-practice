@@ -177,11 +177,13 @@ describe("counter mounted tests", () => {
     test("timer value doesn't go below 0", () => {
       wrapper.find("#timerMinus10s").simulate("click");
       expect(wrapper.find("#sec").text()).toBe("00");
+      wrapper.find("#timerMinus1min").simulate("click");
+      expect(wrapper.find("#min").text()).toBe("0");
     })
   })
 
   describe("rendering mounted expectations from click events", () => {
-    
+
     test("render the click event of decrement-btn, decrement and reset counter value", () => {
       wrapper.find("#increment-btna").simulate("click");
       expect(wrapper.find("#counter-valuea").text()).toBe("1");
