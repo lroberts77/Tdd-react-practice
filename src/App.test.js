@@ -180,6 +180,15 @@ describe("counter mounted tests", () => {
       wrapper.find("#timerMinus1min").simulate("click");
       expect(wrapper.find("#min").text()).toBe("0");
     })
+
+    test("when timer minutes > 0 and seconds at 0, when -10s is clicked minutes -1 and seconds equal 50", () => {
+      wrapper.find("#timerPlus1min").simulate("click");
+      expect(wrapper.find("#sec").text()).toBe("00");
+      expect(wrapper.find("#min").text()).toBe("1");
+      wrapper.find("#timerMinus10s").simulate("click");
+      expect(wrapper.find("#min").text()).toBe("0");
+      expect(wrapper.find("#sec").text()).toBe("50");
+    })
   })
 
   describe("rendering mounted expectations from click events", () => {
