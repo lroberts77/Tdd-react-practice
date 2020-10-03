@@ -1,8 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Counter from './Counter';
 import { shallow, mount } from 'enzyme';
 import App from './App';
-
 
 describe("Counter Testing", () => {
 
@@ -214,6 +213,7 @@ describe("counter mounted tests", () => {
 
     test("render a button with the text Stop", () => {
       wrapper.find("#start-stop").simulate("click");
+      // expect(wrapper.find("setIsRunning")).toEqual(true);
       expect(wrapper.find("#start-stop").text()).toContain("Stop");
     })
 
