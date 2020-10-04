@@ -14,12 +14,13 @@ export default function Counter() {
   if(counterb < 1){
     counterb = 0;
   }
-  
+
   var [foulsb, setfoulsb] = useState(0);
   var [foulsa, setfoulsa] = useState(0);
 
   var [seconds, setseconds] = useState(0);
   var [minutes, setminutes] = useState(0);
+  //minutes does not below 0 if it does minutes gets reset to 0
   if(minutes < 0 ) {
     setminutes( minutes = 0 );
   }
