@@ -4,13 +4,17 @@ import "./counter.css";
 export default function Counter() {
 
   var [countera, setcountera] = useState(0);
+  var [counterb, setcounterb] = useState(0);
+
+  //countera does not go below 0 if it does countera gets reset to 0
   if(countera < 1){
     countera = 0;
   }
-  var [counterb, setcounterb] = useState(0);
+  //counterb does not go below 0 if it does counterb gets reset to 0
   if(counterb < 1){
     counterb = 0;
   }
+  
   var [foulsb, setfoulsb] = useState(0);
   var [foulsa, setfoulsa] = useState(0);
 
