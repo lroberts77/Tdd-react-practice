@@ -4,23 +4,29 @@ import "./counter.css";
 export default function Counter() {
 
   var [countera, setcountera] = useState(0);
+  var [counterb, setcounterb] = useState(0);
+
+  //countera does not go below 0 if it does countera gets reset to 0
   if(countera < 1){
     countera = 0;
   }
-  var [counterb, setcounterb] = useState(0);
+  //counterb does not go below 0 if it does counterb gets reset to 0
   if(counterb < 1){
     counterb = 0;
   }
+
   var [foulsb, setfoulsb] = useState(0);
   var [foulsa, setfoulsa] = useState(0);
 
   var [seconds, setseconds] = useState(0);
   var [minutes, setminutes] = useState(0);
+
+  var [isRunning, setIsRunning] = useState(false);
+
+  //minutes does not below 0 if it does minutes gets reset to 0
   if(minutes < 0 ) {
     setminutes( minutes = 0 );
   }
-
-  var [isRunning, setIsRunning] = useState(false);
 
   seconds = seconds < 10 ? '0' + seconds : seconds;
 
