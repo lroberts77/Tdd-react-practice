@@ -29,7 +29,7 @@ export default function Counter() {
   }
   // if the seconds are less than 10 add a 0 before seconds else display seconds
   seconds = seconds < 10 ? '0' + seconds : seconds;
-
+  // if seconds go above 59 then +1 minute and set seconds as seconds % 10
   if(seconds > '59') {
     setseconds(seconds = seconds % 10);
     setminutes( minutes + 1);
@@ -54,7 +54,7 @@ export default function Counter() {
     }
     return undefined;
   }, [isRunning]);
-  
+  // if the timer reaches 0 the timer stops by setting minutes and seconds to 0 and setting isRunning to false
   if(minutes === 0 && seconds < '00' ) {
     setseconds( seconds = 0 );
     setminutes( minutes = 0 );
