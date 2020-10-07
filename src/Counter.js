@@ -44,6 +44,13 @@ export default function Counter() {
     setseconds(seconds = 50);
     setminutes( minutes - 1);
   } 
+  // if the timer reaches 0 the timer stops by setting minutes and seconds to 0 and setting isRunning to false
+  if(minutes === 0 && seconds < '00' ) {
+    setseconds( seconds = 0 );
+    setminutes( minutes = 0 );
+    setIsRunning(false);
+  }
+
   // if timer is running set interval to -1 from seconds every second else clear interval
   useEffect(() => {
     if (isRunning) {
@@ -54,12 +61,6 @@ export default function Counter() {
     }
     return undefined;
   }, [isRunning]);
-  // if the timer reaches 0 the timer stops by setting minutes and seconds to 0 and setting isRunning to false
-  if(minutes === 0 && seconds < '00' ) {
-    setseconds( seconds = 0 );
-    setminutes( minutes = 0 );
-    setIsRunning(false);
-  }
 
   return(
     <div>
