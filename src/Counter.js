@@ -39,7 +39,7 @@ export default function Counter() {
     setseconds(seconds = 59)
     setminutes( minutes - 1);
   } 
-
+  // if timer is not running and seconds go below 00 and minutes are above 0 set seconds to 50 and -1 from minutes
   if(isRunning === false && seconds < '00' && minutes !== 0 ) {
     setseconds(seconds = 50);
     setminutes( minutes - 1);
