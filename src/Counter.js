@@ -154,6 +154,7 @@ export default function Counter() {
           </Grid>
         </Grid>
         <Grid className="fouls-container" >
+          <div className="fouls-teama">FOULS</div>
           <div id="fouls-b">{foulsb}</div>
           <button id="foulsplus1-btnb" onClick={() => setfoulsb( foulsb + 1)}>+1</button>
           <button id="fouls-btnb" onClick={() => setfoulsb( foulsb = 0 )}>Reset</button>
