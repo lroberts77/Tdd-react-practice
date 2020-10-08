@@ -15,11 +15,8 @@ describe("Counter Testing", () => {
       expect(wrapper.find("h1").text()).toContain("Score");
     })
     
-    test("render a div for title fouls for team a", () => {
+    test("render a div for title fouls for each team", () => {
       expect(wrapper.find('div.fouls-teama').text()).toContain("FOULS");
-    })
-
-    test("render a div for title fouls for team b", () => {
       expect(wrapper.find('div.fouls-teamb').text()).toContain("FOULS");
     })
 
