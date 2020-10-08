@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react"
 import "./counter.css";
+import { Grid } from "@material-ui/core";
 
 export default function Counter() {
   // state for counter a and b
@@ -63,15 +64,25 @@ export default function Counter() {
   }, [isRunning]);
 
   return(
-    <div>
-      <button id="timerPlus10s" onClick={() => setseconds( seconds => seconds + 10 )}>+10s</button>
-      <button id="timerPlus1min" onClick={() => setminutes( minutes => minutes + 1 )}>+1 min</button>
-      <button id="timerMinus10s" onClick={() => setseconds( seconds => seconds - 10 )}>-10s</button>
-      <button id="timerMinus1min" onClick={() => setminutes( minutes => minutes - 1 )}>-1 min</button>
-      <div className="timer">
-        <span id="min" className="minutes">{minutes}</span>:<span id="sec" className="seconds">{seconds}</span>
-      </div>
-      <div className="buttons">
+    <div className="app-container">
+      <Grid container spacing={2}>
+        <Grid item xs={3} 
+          container
+          direction="column"
+          justify="center"
+          alignItems="center">
+          <button id="timerPlus10s" onClick={() => setseconds( seconds => seconds + 10 )}>+10s</button>
+          <button id="timerPlus1min" onClick={() => setminutes( minutes => minutes + 1 )}>+1 min</button>
+        </Grid>
+        <Grid item xs={6}
+          container
+          direction="column"
+          justify="center"
+          alignItems="center">
+          <div className="timer">
+            <span id="min" className="minutes">{minutes}</span>:<span id="sec" className="seconds">{seconds}</span>
+          </div>
+          <div className="buttons">
         {isRunning
         ? (
       <button id="start-stop" onClick={() => {
@@ -90,6 +101,19 @@ export default function Counter() {
         setIsRunning(false);
       }}>Reset</button>
       </div>
+        </Grid>
+        <Grid item xs={3} 
+          container
+          direction="column"
+          justify="center"
+          alignItems="center">
+        <button id="timerMinus10s" onClick={() => setseconds( seconds => seconds - 10 )}>-10s</button>
+      <button id="timerMinus1min" onClick={() => setminutes( minutes => minutes - 1 )}>-1 min</button>
+        </Grid>
+
+
+
+      </Grid>
       <h1 id="score">Score</h1>
       <div id="team-a">TEAM A</div>
       <div id="counter-valuea">{countera}</div>
