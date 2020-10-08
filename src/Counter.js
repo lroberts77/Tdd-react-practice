@@ -115,7 +115,7 @@ export default function Counter() {
       <Grid item xs={12}>
         <h1 id="score">Score</h1>
       </Grid>
-      <Grid>
+      <Grid container spacing={2}>
         <Grid item xs={3} 
             container
             direction="column"
@@ -127,8 +127,13 @@ export default function Counter() {
           <button id="decrement-btna" onClick={() => setcountera( countera - 1 )}>-1</button>
           <button id="reset-btna" onClick={() => setcountera( countera = 0 )}>Reset</button>
         </Grid>
-
+        <Grid item xs={3} 
+            container
+            direction="column"
+            justify="center"
+            alignItems="center">
           <div id="counter-valuea">{countera}</div>
+          </Grid>
 
           <div id="team-b">TEAM B</div>
           <div id="counter-valueb">{counterb}</div>
