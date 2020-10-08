@@ -174,13 +174,16 @@ export default function Counter() {
             <button id="foulsplus1-btnb" onClick={() => setfoulsb( foulsb + 1)}>+1</button>
             <button id="fouls-btnb" onClick={() => setfoulsb( foulsb = 0 )}>Reset</button>
           </Grid>
-          <div id="fouls-b">{foulsb}</div>
+          <Grid>
+            <div id="fouls-b">{foulsb}</div>
+          </Grid>
+          <Grid>
+            <div id="fouls-a">{foulsa}</div>
+          </Grid>
           <Grid>
             <button id="foulsplus1-btna" onClick={() => setfoulsa( foulsa + 1)}>+1</button>
             <button id="fouls-btna" onClick={() => setfoulsa( foulsa = 0 )}>Reset</button>
           </Grid>
-          <div id="fouls-a">{foulsa}</div>
-
         </Grid>
 
 
