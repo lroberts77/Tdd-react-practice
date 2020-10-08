@@ -64,6 +64,7 @@ export default function Counter() {
   }, [isRunning]);
 
   return(
+
     <div>
       <Grid container spacing={2}>
         <Grid item xs={3} 
@@ -74,7 +75,7 @@ export default function Counter() {
           <button id="timerPlus10s" onClick={() => setseconds( seconds => seconds + 10 )}>+10s</button>
           <button id="timerPlus1min" onClick={() => setminutes( minutes => minutes + 1 )}>+1 min</button>
         </Grid>
-        <Grid item xs={6} 
+        <Grid item xs={6}
           container
           direction="column"
           justify="center"
@@ -137,7 +138,6 @@ export default function Counter() {
         <div id="fouls-a">{foulsa}</div>
         <button id="foulsplus1-btna" onClick={() => setfoulsa( foulsa + 1)}>+1</button>
         <button id="fouls-btna" onClick={() => setfoulsa( foulsa = 0 )}>Reset</button>
-
     </div>
     
   )
