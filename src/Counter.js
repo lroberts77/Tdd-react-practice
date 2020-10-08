@@ -134,9 +134,16 @@ export default function Counter() {
             alignItems="center">
           <div id="counter-valuea">{countera}</div>
           </Grid>
+          <Grid item xs={3} 
+            container
+            direction="column"
+            justify="center"
+            alignItems="center">
+          <div id="counter-valueb">{counterb}</div>
+          </Grid>
 
           <div id="team-b">TEAM B</div>
-          <div id="counter-valueb">{counterb}</div>
+
           <button id="increment-btnb" onClick={() => setcounterb( counterb + 1 )}>+1</button>
           <button id="increment3-btnb" onClick={() => setcounterb( counterb + 3 )}>+3</button>
           <button id="decrement-btnb" onClick={() => setcounterb( counterb - 1 )}>-1</button>
