@@ -5,6 +5,10 @@
   font-family: Orbitron;
 }
 
+.fouls-title {
+  font-size: 1.5rem;
+}
+
 .timer-container {
   height: 40vh;
 }
