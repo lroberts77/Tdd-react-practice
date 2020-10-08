@@ -64,6 +64,7 @@ export default function Counter() {
   }, [isRunning]);
 
   return(
+
     <div>
       <Grid container spacing={2}>
         <Grid item xs={3} 
@@ -74,7 +75,7 @@ export default function Counter() {
           <button id="timerPlus10s" onClick={() => setseconds( seconds => seconds + 10 )}>+10s</button>
           <button id="timerPlus1min" onClick={() => setminutes( minutes => minutes + 1 )}>+1 min</button>
         </Grid>
-        <Grid item xs={6} 
+        <Grid item xs={6}
           container
           direction="column"
           justify="center"
@@ -110,7 +111,6 @@ export default function Counter() {
         <button id="timerMinus10s" onClick={() => setseconds( seconds => seconds - 10 )}>-10s</button>
         <button id="timerMinus1min" onClick={() => setminutes( minutes => minutes - 1 )}>-1 min</button>
         </Grid>
-        </Grid>
         <h1 id="score">Score</h1>
         <div id="team-a">TEAM A</div>
         <div id="counter-valuea">{countera}</div>
@@ -130,7 +130,6 @@ export default function Counter() {
         <div id="fouls-b">{foulsb}</div>
         <button id="foulsplus1-btnb" onClick={() => setfoulsb( foulsb + 1)}>+1</button>
         <button id="fouls-btnb" onClick={() => setfoulsb( foulsb = 0 )}>Reset</button>
-
     </div>
     
   )
