@@ -74,11 +74,23 @@ export default function Counter() {
           <button id="timerPlus10s" onClick={() => setseconds( seconds => seconds + 10 )}>+10s</button>
           <button id="timerPlus1min" onClick={() => setminutes( minutes => minutes + 1 )}>+1 min</button>
         </Grid>
+        <Grid item xs={3} 
+          container
+          direction="column"
+          justify="center"
+          alignItems="center">
         <button id="timerMinus10s" onClick={() => setseconds( seconds => seconds - 10 )}>-10s</button>
         <button id="timerMinus1min" onClick={() => setminutes( minutes => minutes - 1 )}>-1 min</button>
+        </Grid>
+        <Grid item xs={6} 
+          container
+          direction="column"
+          justify="center"
+          alignItems="center">
         <div className="timer">
           <span id="min" className="minutes">{minutes}</span>:<span id="sec" className="seconds">{seconds}</span>
         </div>
+        </Grid>
         <div className="buttons">
           {isRunning
           ? (
