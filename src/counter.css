@@ -5,16 +5,25 @@
   font-family: Orbitron;
 }
 
+.timer-container {
+  height: 40vh;
+}
+
+.score-container {
+  height: 30vh;
+}
+
+.fouls-container {
+  height: 20%;
+}
+
 #score {
   text-align: center;
 }
 
-#counter-valuea {
-  height: 50%;
-}
-
 #counter-valuea, #counter-valueb {
   font-family: Orbitron;
+  font-size: 6rem;
 }
 
 #fouls-a, #fouls-b {
