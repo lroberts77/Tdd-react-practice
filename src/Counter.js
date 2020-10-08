@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react"
 import "./counter.css";
+import { Grid } from "@material-ui/core";
 
 export default function Counter() {
   // state for counter a and b
@@ -64,51 +65,61 @@ export default function Counter() {
 
   return(
     <div>
-      <button id="timerPlus10s" onClick={() => setseconds( seconds => seconds + 10 )}>+10s</button>
-      <button id="timerPlus1min" onClick={() => setminutes( minutes => minutes + 1 )}>+1 min</button>
-      <button id="timerMinus10s" onClick={() => setseconds( seconds => seconds - 10 )}>-10s</button>
-      <button id="timerMinus1min" onClick={() => setminutes( minutes => minutes - 1 )}>-1 min</button>
-      <div className="timer">
-        <span id="min" className="minutes">{minutes}</span>:<span id="sec" className="seconds">{seconds}</span>
-      </div>
-      <div className="buttons">
-        {isRunning
-        ? (
-      <button id="start-stop" onClick={() => {
-        setIsRunning(false);
-      }}>Stop
-      </button>
-        ) : (
-      <button id="start-stop" onClick={() => setIsRunning(true)}>
-      Start
-      </button>
-        )
-      }
-      <button id="reset-timer" onClick={() => {
-        setseconds( seconds = 0 );
-        setminutes( minutes = 0 );
-        setIsRunning(false);
-      }}>Reset</button>
-      </div>
-      <h1 id="score">Score</h1>
-      <div id="team-a">TEAM A</div>
-      <div id="counter-valuea">{countera}</div>
-      <button id="increment-btna" onClick={() => setcountera( countera + 1 )}>+1</button>
-      <button id="increment3-btna" onClick={() => setcountera( countera + 3 )}>+3</button>
-      <button id="decrement-btna" onClick={() => setcountera( countera - 1 )}>-1</button>
-      <button id="reset-btna" onClick={() => setcountera( countera = 0 )}>Reset</button>
-      <div id="fouls-a">{foulsa}</div>
-      <button id="foulsplus1-btna" onClick={() => setfoulsa( foulsa + 1)}>+1</button>
-      <button id="fouls-btna" onClick={() => setfoulsa( foulsa = 0 )}>Reset</button>
-      <div id="team-b">TEAM B</div>
-      <div id="counter-valueb">{counterb}</div>
-      <button id="increment-btnb" onClick={() => setcounterb( counterb + 1 )}>+1</button>
-      <button id="increment3-btnb" onClick={() => setcounterb( counterb + 3 )}>+3</button>
-      <button id="decrement-btnb" onClick={() => setcounterb( counterb - 1 )}>-1</button>
-      <button id="reset-btnb" onClick={() => setcounterb( counterb = 0 )}>Reset</button>
-      <div id="fouls-b">{foulsb}</div>
-      <button id="foulsplus1-btnb" onClick={() => setfoulsb( foulsb + 1)}>+1</button>
-      <button id="fouls-btnb" onClick={() => setfoulsb( foulsb = 0 )}>Reset</button>
+      <Grid container spacing={2}>
+        <Grid item xs={3} 
+          container
+          direction="column"
+          justify="center"
+          alignItems="center">
+          <button id="timerPlus10s" onClick={() => setseconds( seconds => seconds + 10 )}>+10s</button>
+          <button id="timerPlus1min" onClick={() => setminutes( minutes => minutes + 1 )}>+1 min</button>
+        </Grid>
+        <button id="timerMinus10s" onClick={() => setseconds( seconds => seconds - 10 )}>-10s</button>
+        <button id="timerMinus1min" onClick={() => setminutes( minutes => minutes - 1 )}>-1 min</button>
+        <div className="timer">
+          <span id="min" className="minutes">{minutes}</span>:<span id="sec" className="seconds">{seconds}</span>
+        </div>
+        <div className="buttons">
+          {isRunning
+          ? (
+        <button id="start-stop" onClick={() => {
+          setIsRunning(false);
+        }}>Stop
+        </button>
+          ) : (
+        <button id="start-stop" onClick={() => setIsRunning(true)}>
+        Start
+        </button>
+          )
+        }
+        <button id="reset-timer" onClick={() => {
+          setseconds( seconds = 0 );
+          setminutes( minutes = 0 );
+          setIsRunning(false);
+        }}>Reset</button>
+        </div>
+        </Grid>
+        <h1 id="score">Score</h1>
+        <div id="team-a">TEAM A</div>
+        <div id="counter-valuea">{countera}</div>
+        <button id="increment-btna" onClick={() => setcountera( countera + 1 )}>+1</button>
+        <button id="increment3-btna" onClick={() => setcountera( countera + 3 )}>+3</button>
+        <button id="decrement-btna" onClick={() => setcountera( countera - 1 )}>-1</button>
+        <button id="reset-btna" onClick={() => setcountera( countera = 0 )}>Reset</button>
+        <div id="fouls-a">{foulsa}</div>
+        <button id="foulsplus1-btna" onClick={() => setfoulsa( foulsa + 1)}>+1</button>
+        <button id="fouls-btna" onClick={() => setfoulsa( foulsa = 0 )}>Reset</button>
+        <div id="team-b">TEAM B</div>
+        <div id="counter-valueb">{counterb}</div>
+        <button id="increment-btnb" onClick={() => setcounterb( counterb + 1 )}>+1</button>
+        <button id="increment3-btnb" onClick={() => setcounterb( counterb + 3 )}>+3</button>
+        <button id="decrement-btnb" onClick={() => setcounterb( counterb - 1 )}>-1</button>
+        <button id="reset-btnb" onClick={() => setcounterb( counterb = 0 )}>Reset</button>
+        <div id="fouls-b">{foulsb}</div>
+        <button id="foulsplus1-btnb" onClick={() => setfoulsb( foulsb + 1)}>+1</button>
+        <button id="fouls-btnb" onClick={() => setfoulsb( foulsb = 0 )}>Reset</button>
+
     </div>
+    
   )
 }
