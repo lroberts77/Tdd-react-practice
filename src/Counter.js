@@ -169,13 +169,18 @@ export default function Counter() {
             <div className="fouls-teamb">FOULS</div>
           </Grid>
         </Grid>
-        <Grid className="fouls-container" >
+        <Grid className="fouls-container" container spacing={2} >
+          <Grid>
+            <button id="foulsplus1-btnb" onClick={() => setfoulsb( foulsb + 1)}>+1</button>
+            <button id="fouls-btnb" onClick={() => setfoulsb( foulsb = 0 )}>Reset</button>
+          </Grid>
           <div id="fouls-b">{foulsb}</div>
-          <button id="foulsplus1-btnb" onClick={() => setfoulsb( foulsb + 1)}>+1</button>
-          <button id="fouls-btnb" onClick={() => setfoulsb( foulsb = 0 )}>Reset</button>
+          <Grid>
+            <button id="foulsplus1-btna" onClick={() => setfoulsa( foulsa + 1)}>+1</button>
+            <button id="fouls-btna" onClick={() => setfoulsa( foulsa = 0 )}>Reset</button>
+          </Grid>
           <div id="fouls-a">{foulsa}</div>
-          <button id="foulsplus1-btna" onClick={() => setfoulsa( foulsa + 1)}>+1</button>
-          <button id="fouls-btna" onClick={() => setfoulsa( foulsa = 0 )}>Reset</button>
+
         </Grid>
 
 

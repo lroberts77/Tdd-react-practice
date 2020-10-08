@@ -9,6 +9,10 @@
   font-size: 1.5rem;
 }
 
+#team-a, #team-b {
+  font-size: 1.5rem;
+}
+
 .timer-container {
   height: 40vh;
 }
