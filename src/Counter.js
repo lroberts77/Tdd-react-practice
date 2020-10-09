@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react"
-import "./counter.css";
+import "./counter.scss";
 import { Grid } from "@material-ui/core";
 
 export default function Counter() {
@@ -15,6 +15,7 @@ export default function Counter() {
   if(counterb < 1){
     counterb = 0;
   }
+  
   // state for fouls a and b
   var [foulsb, setfoulsb] = useState(0);
   var [foulsa, setfoulsa] = useState(0);
@@ -65,8 +66,8 @@ export default function Counter() {
 
   return(
 
-    <div>
-      <Grid container spacing={2}>
+    <div className="app-container">
+      <Grid className="timer-container" item xs={12} container spacing={2}>
         <Grid item xs={3} 
           container
           direction="column"
@@ -111,26 +112,110 @@ export default function Counter() {
         <button id="timerMinus10s" onClick={() => setseconds( seconds => seconds - 10 )}>-10s</button>
         <button id="timerMinus1min" onClick={() => setminutes( minutes => minutes - 1 )}>-1 min</button>
         </Grid>
+      </Grid>
+      <Grid item xs={12}>
         <h1 id="score">Score</h1>
-        <div id="team-a">TEAM A</div>
-        <div id="counter-valuea">{countera}</div>
-        <button id="increment-btna" onClick={() => setcountera( countera + 1 )}>+1</button>
-        <button id="increment3-btna" onClick={() => setcountera( countera + 3 )}>+3</button>
-        <button id="decrement-btna" onClick={() => setcountera( countera - 1 )}>-1</button>
-        <button id="reset-btna" onClick={() => setcountera( countera = 0 )}>Reset</button>
-        <div id="fouls-a">{foulsa}</div>
-        <button id="foulsplus1-btna" onClick={() => setfoulsa( foulsa + 1)}>+1</button>
-        <button id="fouls-btna" onClick={() => setfoulsa( foulsa = 0 )}>Reset</button>
-        <div id="team-b">TEAM B</div>
-        <div id="counter-valueb">{counterb}</div>
-        <button id="increment-btnb" onClick={() => setcounterb( counterb + 1 )}>+1</button>
-        <button id="increment3-btnb" onClick={() => setcounterb( counterb + 3 )}>+3</button>
-        <button id="decrement-btnb" onClick={() => setcounterb( counterb - 1 )}>-1</button>
-        <button id="reset-btnb" onClick={() => setcounterb( counterb = 0 )}>Reset</button>
-        <div id="fouls-b">{foulsb}</div>
-        <button id="foulsplus1-btnb" onClick={() => setfoulsb( foulsb + 1)}>+1</button>
-        <button id="fouls-btnb" onClick={() => setfoulsb( foulsb = 0 )}>Reset</button>
-    </div>
-    
+      </Grid>
+      <Grid container spacing={2}>
+      <Grid item xs={6}             
+            container
+            direction="column"
+            justify="center"
+            alignItems="center">
+      <div id="team-a">TEAM A</div>
+      </Grid>
+      <Grid item xs={6}             
+            container
+            direction="column"
+            justify="center"
+            alignItems="center">
+      <div id="team-b">TEAM B</div>
+      </Grid>
+      </Grid>
+      <Grid className="score-container" container spacing={2}>
+        <Grid item xs={3} 
+            container
+            direction="column"
+            justify="center"
+            alignItems="flex-end">
+          <button id="increment-btna" onClick={() => setcountera( countera + 1 )}>+1</button>
+          <button id="increment3-btna" onClick={() => setcountera( countera + 3 )}>+3</button>
+          <button id="decrement-btna" onClick={() => setcountera( countera - 1 )}>-1</button>
+          <button id="reset-btna" onClick={() => setcountera( countera = 0 )}>Reset</button>
+        </Grid>
+        <Grid item xs={3} 
+            container
+            direction="column"
+            justify="center"
+            alignItems="center">
+          <div id="counter-valuea">{countera}</div>
+          </Grid>
+          <Grid item xs={3} 
+            container
+            direction="column"
+            justify="center"
+            alignItems="center">
+          <div id="counter-valueb">{counterb}</div>
+          </Grid>
+          <Grid item xs={3} 
+            container
+            direction="column"
+            justify="center"
+            alignItems="flex-start">
+          <button id="increment-btnb" onClick={() => setcounterb( counterb + 1 )}>+1</button>
+          <button id="increment3-btnb" onClick={() => setcounterb( counterb + 3 )}>+3</button>
+          <button id="decrement-btnb" onClick={() => setcounterb( counterb - 1 )}>-1</button>
+          <button id="reset-btnb" onClick={() => setcounterb( counterb = 0 )}>Reset</button>
+          </Grid>
+        </Grid>
+        <Grid className="fouls-title" container spacing={2}>
+        <Grid item xs={6}             
+            container
+            direction="column"
+            justify="center"
+            alignItems="center">
+            <div className="fouls-teama">FOULS</div>
+          </Grid>
+          <Grid item xs={6}
+            container
+            direction="column"
+            justify="center"
+            alignItems="center">
+            <div className="fouls-teamb">FOULS</div>
+          </Grid>
+        </Grid>
+        <Grid className="fouls-container" container spacing={4} >
+        <Grid item xs={3}
+            container
+            direction="column"
+            justify="center"
+            alignItems="flex-end">
+            <button id="foulsplus1-btnb" onClick={() => setfoulsb( foulsb + 1)}>+1</button>
+            <button id="fouls-btnb" onClick={() => setfoulsb( foulsb = 0 )}>Reset</button>
+          </Grid>
+          <Grid item xs={3}
+            container
+            direction="row"
+            justify="flex-start"
+            alignItems="center">
+            <div id="fouls-b">{foulsb}</div>
+          </Grid>
+          <Grid item xs={3}
+            container
+            direction="row"
+            justify="flex-end"
+            alignItems="center">
+            <div id="fouls-a">{foulsa}</div>
+          </Grid>
+          <Grid item xs={3}
+            container
+            direction="column"
+            justify="center"
+            alignItems="flex-start">
+            <button id="foulsplus1-btna" onClick={() => setfoulsa( foulsa + 1)}>+1</button>
+            <button id="fouls-btna" onClick={() => setfoulsa( foulsa = 0 )}>Reset</button>
+          </Grid>
+        </Grid>
+    </div> 
   )
 }

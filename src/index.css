@@ -5,7 +5,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: url('./assets/bball.jpg');
+  background-color:rgb(51, 51, 51);
+  background-image: url('./assets/bg2.jpg'); 
   /* Background image is centered vertically and horizontally at all times */
   background-position: center center;
 
@@ -21,7 +22,5 @@ body {
   background-size: cover;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
+
+

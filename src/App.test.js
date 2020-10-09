@@ -14,6 +14,11 @@ describe("Counter Testing", () => {
     test("render the title of counter", () => {
       expect(wrapper.find("h1").text()).toContain("Score");
     })
+    
+    test("render a div for title fouls for each team", () => {
+      expect(wrapper.find('div.fouls-teama').text()).toContain("FOULS");
+      expect(wrapper.find('div.fouls-teamb').text()).toContain("FOULS");
+    })
 
     test("render a div for the timer displaying 0:00", () => {
       expect(wrapper.find('div.timer').text()).toContain("0:00");
