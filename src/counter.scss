@@ -32,8 +32,8 @@
 
 #counter-valuea, #counter-valueb {
   font-family: Orbitron;
-  font-size: 6rem;
-  color: #23e000;
+  font-size: 7rem;
+  text-shadow: 5px 10px 10px #23e000;
 }
 
 #fouls-a, #fouls-b {
@@ -63,13 +63,30 @@
   box-shadow: 5px 10px 8px 5px #020202;
 }
 
-#timerPlus10s:hover, #timerPlus1min:hover, #timerMinus10s:hover, #timerMinus1min:hover, #start-stop:hover, #reset-timer:hover {
+#timerPlus10s:hover, #timerPlus1min:hover, #timerMinus10s:hover, #timerMinus1min:hover, #start-stop:hover {
   background-color: #23e000;
-  color: white;
+  color: black;
+}
+
+#reset-timer:hover, #reset-btna:hover, #reset-btnb:hover {
+  background-color: #23e000;
+  color: red;
 }
 
 #increment-btna, #increment3-btna, #decrement-btna, #reset-btna,
 #increment-btnb, #increment3-btnb, #decrement-btnb, #reset-btnb {
   width: 5rem;
-  font-size: 1rem;
+  font-size: 1.3rem;
+  background-color: rgb(51, 51, 51); 
+  border-radius: 5px;
+  color: #23e000; 
+  border: 2px solid #23e000;
+  transition-duration: 0.4s;
+  box-shadow: 5px 10px 8px 5px #020202;
+}
+
+#increment-btna:hover, #increment3-btna:hover, #decrement-btna:hover,
+#increment-btnb:hover, #increment3-btnb:hover, #decrement-btnb:hover {
+  background-color: #23e000;
+  color: black;
 }
