@@ -14,7 +14,7 @@
 }
 
 .timer-container {
-  height: 43vh;
+  height: 40vh;
 }
 
 .score-container {
@@ -32,6 +32,10 @@
 
 #fouls-a, #fouls-b, #team-a, #team-b {
   font-family: Orbitron;
+}
+
+#foulsplus1-btna, #fouls-btna, #foulsplus1-btnb, #fouls-btnb {
+  width: 4rem;
 }
 
 #timerPlus10s, #timerPlus1min, #timerMinus10s, #timerMinus1min , #start-stop, #reset-timer {

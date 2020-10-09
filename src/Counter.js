@@ -15,6 +15,7 @@ export default function Counter() {
   if(counterb < 1){
     counterb = 0;
   }
+  
   // state for fouls a and b
   var [foulsb, setfoulsb] = useState(0);
   var [foulsa, setfoulsa] = useState(0);
@@ -183,7 +184,7 @@ export default function Counter() {
             <div className="fouls-teamb">FOULS</div>
           </Grid>
         </Grid>
-        <Grid className="fouls-container" container spacing={2} >
+        <Grid className="fouls-container" container spacing={4} >
         <Grid item xs={3}
             container
             direction="column"
