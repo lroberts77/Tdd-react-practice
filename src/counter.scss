@@ -2,9 +2,6 @@
   font-size: 11rem;
   font-family: Orbitron;
   color: black;
-}
-
-.minutes, .seconds {
   text-shadow: 5px 10px 10px #23e000;
 }
 
@@ -54,15 +51,6 @@
   box-shadow: 5px 10px 8px 5px #020202;
 }
 
-#foulsplus1-btna:hover, #fouls-btna:hover, #foulsplus1-btnb:hover, #fouls-btnb:hover {
-  background-color: #23e000;
-  color: black;
-}
-
-// #timerPlus10s, #timerPlus1min, #timerMinus10s, #timerMinus1min {
-
-// }
-
 #timerPlus10s, #timerPlus1min, #timerMinus10s, #timerMinus1min , #start-stop, #reset-timer {
   width: 9rem;
   font-size: 2rem;
@@ -74,12 +62,7 @@
   box-shadow: 5px 10px 8px 5px #020202;
 }
 
-#timerPlus10s:hover, #timerPlus1min:hover, #timerMinus10s:hover, #timerMinus1min:hover, #start-stop:hover {
-  background-color: #23e000;
-  color: black;
-}
-
-#reset-timer:hover, #reset-btna:hover, #reset-btnb:hover {
+#reset-timer:hover, #reset-btna:hover, #reset-btnb:hover, #fouls-btna:hover, #fouls-btnb:hover {
   background-color: #23e000;
   color: red;
 }
@@ -97,7 +80,9 @@
 }
 
 #increment-btna:hover, #increment3-btna:hover, #decrement-btna:hover,
-#increment-btnb:hover, #increment3-btnb:hover, #decrement-btnb:hover {
+#increment-btnb:hover, #increment3-btnb:hover, #decrement-btnb:hover,
+#timerPlus10s:hover, #timerPlus1min:hover, #timerMinus10s:hover, #timerMinus1min:hover,
+ #start-stop:hover, #foulsplus1-btna:hover, #foulsplus1-btnb:hover {
   background-color: #23e000;
   color: black;
 }
