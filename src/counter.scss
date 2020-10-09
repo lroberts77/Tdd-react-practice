@@ -6,7 +6,11 @@
 }
 
 .fouls-title {
-  font-size: 120%;
+  font-size: 150%;
+}
+
+.fouls-teama, .fouls-teamb {
+  font-weight: bolder;
 }
 
 #team-a, #team-b, #fouls-a, #fouls-b, #score {
@@ -15,8 +19,12 @@
   font-weight: bold;
 }
 
+#team-b {
+  color: white;
+}
+
 .timer-container {
-  height: 40vh;
+  height: 35vh;
 }
 
 .score-container {
