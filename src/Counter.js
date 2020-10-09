@@ -160,7 +160,7 @@ export default function Counter() {
             container
             direction="column"
             justify="center"
-            alignItems="center">
+            alignItems="flex-start">
           <button id="increment-btnb" onClick={() => setcounterb( counterb + 1 )}>+1</button>
           <button id="increment3-btnb" onClick={() => setcounterb( counterb + 3 )}>+3</button>
           <button id="decrement-btnb" onClick={() => setcounterb( counterb - 1 )}>-1</button>
