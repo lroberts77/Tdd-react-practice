@@ -188,7 +188,7 @@ export default function Counter() {
             container
             direction="column"
             justify="center"
-            alignItems="center">
+            alignItems="flex-end">
             <button id="foulsplus1-btnb" onClick={() => setfoulsb( foulsb + 1)}>+1</button>
             <button id="fouls-btnb" onClick={() => setfoulsb( foulsb = 0 )}>Reset</button>
           </Grid>
@@ -210,7 +210,7 @@ export default function Counter() {
             container
             direction="column"
             justify="center"
-            alignItems="center">
+            alignItems="flex-start">
             <button id="foulsplus1-btna" onClick={() => setfoulsa( foulsa + 1)}>+1</button>
             <button id="fouls-btna" onClick={() => setfoulsa( foulsa = 0 )}>Reset</button>
           </Grid>
