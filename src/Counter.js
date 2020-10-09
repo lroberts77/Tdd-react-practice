@@ -136,8 +136,7 @@ export default function Counter() {
             container
             direction="column"
             justify="center"
-            alignItems="center">
-
+            alignItems="flex-end">
           <button id="increment-btna" onClick={() => setcountera( countera + 1 )}>+1</button>
           <button id="increment3-btna" onClick={() => setcountera( countera + 3 )}>+3</button>
           <button id="decrement-btna" onClick={() => setcountera( countera - 1 )}>-1</button>
@@ -162,7 +161,6 @@ export default function Counter() {
             direction="column"
             justify="center"
             alignItems="center">
-
           <button id="increment-btnb" onClick={() => setcounterb( counterb + 1 )}>+1</button>
           <button id="increment3-btnb" onClick={() => setcounterb( counterb + 3 )}>+3</button>
           <button id="decrement-btnb" onClick={() => setcounterb( counterb - 1 )}>-1</button>

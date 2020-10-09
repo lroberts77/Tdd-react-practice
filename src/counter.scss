@@ -7,13 +7,14 @@
   font-size: 120%;
 }
 
-#team-a, #team-b, #fouls-a, #fouls-b {
+#team-a, #team-b, #fouls-a, #fouls-b, #score {
+  text-align: center;
   font-size: 3vw;
   font-weight: bold;
 }
 
 .timer-container {
-  height: 45vh;
+  height: 43vh;
 }
 
 .score-container {
@@ -22,10 +23,6 @@
 
 .fouls-container {
   height: 20%;
-}
-
-#score {
-  text-align: center;
 }
 
 #counter-valuea, #counter-valueb {
@@ -44,4 +41,9 @@
 #timerPlus10s, #timerPlus1min, #timerMinus10s, #timerMinus1min , #start-stop, #reset-timer {
   width: 7rem;
   font-size: 1.5rem;
+}
+
+#increment-btna, #increment3-btna, #decrement-btna, #reset-btna {
+  width: 5rem;
+  font-size: 1rem;
 }
