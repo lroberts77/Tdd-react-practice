@@ -1,6 +1,7 @@
 .timer {
   font-size: 11rem;
   font-family: Orbitron;
+  color: #23e000;
 }
 
 .fouls-title {
@@ -28,6 +29,11 @@
 #counter-valuea, #counter-valueb {
   font-family: Orbitron;
   font-size: 6rem;
+  color: #23e000;
+}
+
+#fouls-a, #fouls-b {
+  color: #23e000
 }
 
 #fouls-a, #fouls-b, #team-a, #team-b {
