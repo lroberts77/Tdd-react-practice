@@ -14,3 +14,12 @@
 * [Improvemets](#Improvements)
 
 ## <a name="Project">Project Direction</a>
+
+## <a name="Install">Installation</a>
+
+* To clone the repo
+```shell
+$ git clone git@github.com:lroberts77/Tdd-react-practice.git
+$ cd Tdd-react-practice
+$ npm install
+```
