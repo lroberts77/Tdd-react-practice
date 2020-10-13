@@ -16,10 +16,15 @@
 ## <a name="Project">Project Direction</a>
 
 ## <a name="Install">Installation</a>
-
 * To clone the repo
 ```shell
 $ git clone git@github.com:lroberts77/Tdd-react-practice.git
 $ cd Tdd-react-practice
 $ npm install
+```
+
+## <a name="Npmtest">Npm Testing</a>
+* In the root of the project
+```shell
+$ npm test
 ```
