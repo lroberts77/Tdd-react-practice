@@ -14,3 +14,30 @@
 * [Improvemets](#Improvements)
 
 ## <a name="Project">Project Direction</a>
+
+## <a name="Install">Installation</a>
+* To clone the repo
+```shell
+$ git clone git@github.com:lroberts77/Tdd-react-practice.git
+$ cd Tdd-react-practice
+$ npm install
+```
+
+## <a name="Npmtest">Npm Testing</a>
+* In the root of the project
+```shell
+$ npm test
+```
+
+## <a name="Usage">Usage</a>
+* In the root of the project
+```shell
+$ npm start
+```
+If a tab doesn't open with the calculator app running, open a new tab and type in http://localhost:3000 in the url bar and press enter. After the basketball scoreboard has loaded click on the buttons to use the timer and adjust the score anf fouls for each team.
+
+## <a name="Improvements">Improvements</a>
+* limit fouls for each team to 5
+* enable the user to change the names of each team
+* Deploy app
+* Use react native and deploy on the android playstore
