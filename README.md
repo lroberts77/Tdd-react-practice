@@ -35,3 +35,9 @@ $ npm test
 $ npm start
 ```
 If a tab doesn't open with the calculator app running, open a new tab and type in http://localhost:3000 in the url bar and press enter. After the basketball scoreboard has loaded click on the buttons to use the timer and adjust the score anf fouls for each team.
+
+## <a name="Improvements">Improvements</a>
+* limit fouls for each team to 5
+* enable the user to change the names of each team
+* Deploy app
+* Use react native and deploy on the android playstore
