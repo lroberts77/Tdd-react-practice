@@ -28,3 +28,10 @@ $ npm install
 ```shell
 $ npm test
 ```
+
+## <a name="Usage">Usage</a>
+* In the root of the project
+```shell
+$ npm start
+```
+If a tab doesn't open with the calculator app running, open a new tab and type in http://localhost:3000 in the url bar and press enter. After the basketball scoreboard has loaded click on the buttons to use the timer and adjust the score anf fouls for each team.
