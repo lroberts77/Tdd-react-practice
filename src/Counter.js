@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react"
 import "./counter.scss";
 import { Grid } from "@material-ui/core";
 
-export default function Counter() {
+export default function Counter() { 
   // state for counter a and b
   var [countera, setcountera] = useState(0);
   var [counterb, setcounterb] = useState(0);
