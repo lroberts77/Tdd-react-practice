@@ -9,10 +9,7 @@ script:
 deploy:
   provider: pages
   skip-cleanup: true
-  # github-token: "$GITHUB_TOKEN"
+  github-token: "$GITHUB_TOKEN"
   local_dir: build
   on:
     branch: master
-env:
-  global:
-    secure: r4ZLToK4j5ZDhlBL9GBTfbY+BrKA0tBYz7lH/RLEj7RHqy/6Rv+8LSzBoAXS/0/Pd1IswCJwZrXKPTOcKbjaoqv4DMjXrTlZ04KgpokDX7Y0rYE+FasRkubGhT1ZLnlGQe/aFL3ckaaxvp4TkkxQ/w6hwNXEqjapiZFlnUS6q7lRHtMtfaawTg6B48fTQ5XZ4392s3W0cfMzoF0zKgx5Ly10CJWX/u6RzNopRwV7b9VBws/dTWcZHtm4LNk7UQGdEWV5vEVdRR9X8coTFaFu/dmO+6kNlSPzK1Q4/keHsPZHCB0qfFcbCwZpza9aY97yoOxfDi+7iv5HkdJJCUTzNKc2zvB5Hq9YTHxBuab4CXPf671ojR2jhy5VwCLbhBu5z03/K5TqItLaPH9OQJhb21nVlLn6YVvB+44PWDBjOa9Kg0x/T4JUTWFKMyqTDWUdDVsUtT+4huHvchOFSjW163HRcV4EZG7A4/um36yDTc/mwt/fs6liaJBtMXaTKx9qo18TnZjdL/tHvF4Xxk6ui/t+JtqcN9Bk9cLoWGaEmIpmRUEG+Aq3/XY0VMuOpk8DgEUHIkDZHGRXC0bIAvlxtGq2QoX5gZdcAn3L0xP7qXA/293f6HThYDLOB34rX+y8SZGJR1UDlYEBrI47PUcoqiEE1OkmVuZAVDPIoQ7yG8k=
