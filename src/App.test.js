@@ -110,11 +110,31 @@ describe("Counter Testing", () => {
       expect(wrapper.find("#min").text()).toBe("0");
     })
 
-    test("render the click event of foulsplus1-btn and increment counter value", () => {
+    test("render the click event of foulsplus1-btn and increment counter value up to limit of 5", () => {
       wrapper.find("#foulsplus1-btnb").simulate("click");
       expect(wrapper.find("#fouls-b").text()).toBe("1");
+      wrapper.find("#foulsplus1-btnb").simulate("click");
+      expect(wrapper.find("#fouls-b").text()).toBe("2");
+      wrapper.find("#foulsplus1-btnb").simulate("click");
+      expect(wrapper.find("#fouls-b").text()).toBe("3");
+      wrapper.find("#foulsplus1-btnb").simulate("click");
+      expect(wrapper.find("#fouls-b").text()).toBe("4");
+      wrapper.find("#foulsplus1-btnb").simulate("click");
+      expect(wrapper.find("#fouls-b").text()).toBe("5");
+      wrapper.find("#foulsplus1-btnb").simulate("click");
+      expect(wrapper.find("#fouls-b").text()).toBe("5");
       wrapper.find("#foulsplus1-btna").simulate("click");
       expect(wrapper.find("#fouls-a").text()).toBe("1");
+      wrapper.find("#foulsplus1-btna").simulate("click");
+      expect(wrapper.find("#fouls-a").text()).toBe("2");
+      wrapper.find("#foulsplus1-btna").simulate("click");
+      expect(wrapper.find("#fouls-a").text()).toBe("3");
+      wrapper.find("#foulsplus1-btna").simulate("click");
+      expect(wrapper.find("#fouls-a").text()).toBe("4");
+      wrapper.find("#foulsplus1-btna").simulate("click");
+      expect(wrapper.find("#fouls-a").text()).toBe("5");
+      wrapper.find("#foulsplus1-btna").simulate("click");
+      expect(wrapper.find("#fouls-a").text()).toBe("5");
     })
 
     test("render the click event of increment3-btn and increment counter value", () => {

@@ -25,6 +25,14 @@ export default function Counter() {
   // boolean state for is timer running?
   var [isRunning, setIsRunning] = useState(false);
 
+// limits the max number of fouls to 5
+  if(foulsb > 5){
+    foulsb = 5;
+  }
+  if(foulsa > 5){
+    foulsa = 5;
+  }
+
   // minutes does not below 0 if it does minutes gets reset to 0
   if(minutes < 0 ) {
     setminutes( minutes = 0 );
