@@ -1,6 +1,9 @@
 # React Basketball Scoreboard App
 
 <div>
+<a href="https://travis-ci.org/lroberts77/Tdd-react-practice">
+<img src="https://img.shields.io/travis/lroberts77/Tdd-react-practice/master.svg?logo=travis&colorA=000000&colorB=be33ff">
+</a>
 <img src="https://img.shields.io/badge/made%20with-React-green.svg?logo=react&colorA=000000&colorB=be33ff" alt="made with React">
 </div>
 
