@@ -7,10 +7,6 @@ export default function Counter() {
   var [countera, setcountera] = useState(0);
   var [counterb, setcounterb] = useState(0);
 
-  // countera does not go below 0 if it does countera gets reset to 0
-  if(countera < 1){
-    countera = 0;
-  }
   // counterb does not go below 0 if it does counterb gets reset to 0
   if(counterb < 1){
     counterb = 0;
@@ -143,7 +139,7 @@ export default function Counter() {
             alignItems="flex-end">
           <button id="increment-btna" onClick={() => setcountera( countera + 1 )}>+1</button>
           <button id="increment3-btna" onClick={() => setcountera( countera + 3 )}>+3</button>
-          <button id="decrement-btna" onClick={() => setcountera( countera - 1 )}>-1</button>
+          <button id="decrement-btna" onClick={() => countera <= 0 ? countera = 0 : setcountera( countera - 1 )}>-1</button>
           <button id="reset-btna" onClick={() => setcountera( countera = 0 )}>Reset</button>
         </Grid>
         <Grid item xs={3} 
