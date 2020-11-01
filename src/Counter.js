@@ -193,7 +193,7 @@ export default function Counter() {
             direction="column"
             justify="center"
             alignItems="flex-end">
-            <button id="foulsplus1-btna" onClick={() => setfoulsa( foulsa + 1)}>+1</button>
+            <button id="foulsplus1-btna" onClick={() => foulsa >= 5 ? foulsa =5 : setfoulsa( foulsa + 1)}>+1</button>
             <button id="fouls-btna" onClick={() => setfoulsa( foulsa = 0 )}>Reset</button>
           </Grid>
           <Grid item xs={3}
