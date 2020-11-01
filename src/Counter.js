@@ -6,11 +6,6 @@ export default function Counter() {
   // state for counter a and b
   var [countera, setcountera] = useState(0);
   var [counterb, setcounterb] = useState(0);
-
-  // counterb does not go below 0 if it does counterb gets reset to 0
-  if(counterb < 1){
-    counterb = 0;
-  }
   
   // state for fouls a and b
   var [foulsb, setfoulsb] = useState(0);
@@ -163,7 +158,7 @@ export default function Counter() {
             alignItems="flex-start">
           <button id="increment-btnb" onClick={() => setcounterb( counterb + 1 )}>+1</button>
           <button id="increment3-btnb" onClick={() => setcounterb( counterb + 3 )}>+3</button>
-          <button id="decrement-btnb" onClick={() => setcounterb( counterb - 1 )}>-1</button>
+          <button id="decrement-btnb" onClick={() => counterb <= 0 ? counterb = 0 :setcounterb( counterb - 1 )}>-1</button>
           <button id="reset-btnb" onClick={() => setcounterb( counterb = 0 )}>Reset</button>
           </Grid>
         </Grid>
