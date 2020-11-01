@@ -24,14 +24,9 @@ export default function Counter() {
   var [minutes, setminutes] = useState(0);
   // boolean state for is timer running?
   var [isRunning, setIsRunning] = useState(false);
-
-// limits the max number of fouls to 5
-  if(foulsb > 5){
-    foulsb = 5;
-  }
-  if(foulsa > 5){
-    foulsa = 5;
-  }
+  // if(foulsa > 5){
+  //   foulsa = 5;
+  // }
 
   // minutes does not below 0 if it does minutes gets reset to 0
   if(minutes < 0 ) {
@@ -198,30 +193,31 @@ export default function Counter() {
             direction="column"
             justify="center"
             alignItems="flex-end">
-            <button id="foulsplus1-btnb" onClick={() => setfoulsb( foulsb + 1)}>+1</button>
-            <button id="fouls-btnb" onClick={() => setfoulsb( foulsb = 0 )}>Reset</button>
+            <button id="foulsplus1-btna" onClick={() => setfoulsa( foulsa + 1)}>+1</button>
+            <button id="fouls-btna" onClick={() => setfoulsa( foulsa = 0 )}>Reset</button>
           </Grid>
           <Grid item xs={3}
             container
             direction="row"
             justify="flex-start"
             alignItems="center">
-            <div id="fouls-b">{foulsb}</div>
+            <div id="fouls-a">{foulsa}</div>
+
           </Grid>
           <Grid item xs={3}
             container
             direction="row"
             justify="flex-end"
             alignItems="center">
-            <div id="fouls-a">{foulsa}</div>
+            <div id="fouls-b">{foulsb}</div>
           </Grid>
           <Grid item xs={3}
             container
             direction="column"
             justify="center"
             alignItems="flex-start">
-            <button id="foulsplus1-btna" onClick={() => setfoulsa( foulsa + 1)}>+1</button>
-            <button id="fouls-btna" onClick={() => setfoulsa( foulsa = 0 )}>Reset</button>
+            <button id="foulsplus1-btnb" onClick={() => foulsb >= 5 ? foulsb = 5 : setfoulsb( foulsb + 1)}>+1</button>
+            <button id="fouls-btnb" onClick={() => setfoulsb( foulsb = 0 )}>Reset</button>
           </Grid>
         </Grid>
     </div> 
