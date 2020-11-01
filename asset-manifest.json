@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/Tdd-react-practice/static/css/main.770a56bc.chunk.css",
+    "main.js": "/Tdd-react-practice/static/js/main.c51d60f6.chunk.js",
+    "main.js.map": "/Tdd-react-practice/static/js/main.c51d60f6.chunk.js.map",
+    "runtime-main.js": "/Tdd-react-practice/static/js/runtime-main.b47e43dd.js",
+    "runtime-main.js.map": "/Tdd-react-practice/static/js/runtime-main.b47e43dd.js.map",
+    "static/js/2.5fa5a0f6.chunk.js": "/Tdd-react-practice/static/js/2.5fa5a0f6.chunk.js",
+    "static/js/2.5fa5a0f6.chunk.js.map": "/Tdd-react-practice/static/js/2.5fa5a0f6.chunk.js.map",
+    "index.html": "/Tdd-react-practice/index.html",
+    "precache-manifest.524e53ae902a92fcfebd5deb27e201f1.js": "/Tdd-react-practice/precache-manifest.524e53ae902a92fcfebd5deb27e201f1.js",
+    "service-worker.js": "/Tdd-react-practice/service-worker.js",
+    "static/css/main.770a56bc.chunk.css.map": "/Tdd-react-practice/static/css/main.770a56bc.chunk.css.map",
+    "static/js/2.5fa5a0f6.chunk.js.LICENSE.txt": "/Tdd-react-practice/static/js/2.5fa5a0f6.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/Tdd-react-practice/static/media/bg2.05dbb6b9.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b47e43dd.js",
+    "static/js/2.5fa5a0f6.chunk.js",
+    "static/css/main.770a56bc.chunk.css",
+    "static/js/main.c51d60f6.chunk.js"
+  ]
+}
